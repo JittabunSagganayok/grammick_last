@@ -38,7 +38,7 @@ List<Map<String, dynamic>> imagescardList = [
   {
     "id": "1",
     "image_path": 'assets/marketplace/images/rectangle-4604.png',
-    "title": "Awesome Custom RED",
+    "title": "Awesome Custom RED Kit Flag",
     "price": "68,000 ฿",
     "sellername": "Hali Parker",
     "sellerphone": "089-912-2933",
@@ -93,7 +93,7 @@ List<Map<String, dynamic>> imagescardList = [
   {
     "id": "6",
     "image_path": 'assets/marketplace/images/rectangle-4609.png',
-    "title": "Puma King Custom RED...",
+    "title": "Puma King Custom RED Kit Flag",
     "price": "1,208,000 ฿",
     "sellername": "Hali Parker",
     "sellerphone": "089-912-2933",

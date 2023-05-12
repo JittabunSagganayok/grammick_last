@@ -31,7 +31,7 @@ class _ConditionScreenState extends State<ConditionScreen> {
                   padding:
                       EdgeInsets.fromLTRB(18 * fem, 10 * fem, 3 * fem, 0 * fem),
                   width: 375 * fem,
-                  height: 732 * fem,
+                  //height: 732 * fem,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -77,22 +77,8 @@ class _ConditionScreenState extends State<ConditionScreen> {
                           ),
                         ),
                       ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            Stack(
-              children: [
-                Container(
-                  height: 732 * fem,
-                  padding: EdgeInsets.fromLTRB(21 * fem, 0, 0, 0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Expanded(
-                        child: SizedBox(),
+                      SizedBox(
+                        height: 60,
                       ),
                       GestureDetector(
                         onTap: () {
@@ -125,6 +111,7 @@ class _ConditionScreenState extends State<ConditionScreen> {
                           ),
                         ),
                       ),
+                      SizedBox(height: 30)
                     ],
                   ),
                 ),

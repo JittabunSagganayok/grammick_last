@@ -183,7 +183,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       imagetitle,
                       style: SafeGoogleFont(
                         'Kanit',
-                        fontSize: 13,
+                        fontSize: 13 * ffem,
                         fontWeight: FontWeight.w400,
                         height: 1.495,
                         color: const Color(0xff000000),
@@ -197,7 +197,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       imageprice,
                       style: SafeGoogleFont(
                         'Kanit',
-                        fontSize: 13,
+                        fontSize: 13 * ffem,
                         fontWeight: FontWeight.w600,
                         height: 1.495,
                         color: const Color(0xfff9774e),
@@ -216,7 +216,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       "Seller information",
                       style: SafeGoogleFont(
                         'Kanit',
-                        fontSize: 12,
+                        fontSize: 12 * ffem,
                         fontWeight: FontWeight.w300,
                         height: 1.495,
                         color: const Color(0xff4D4D4D),
@@ -261,7 +261,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                   "Hali Parker",
                                   style: SafeGoogleFont(
                                     'Kanit',
-                                    fontSize: 13,
+                                    fontSize: 13 * ffem,
                                     fontWeight: FontWeight.w500,
                                     height: 1.495,
                                     color: const Color(0xff1B1D28),
@@ -272,7 +272,7 @@ class _DetailScreenState extends State<DetailScreen> {
                                   "089-912-2933",
                                   style: SafeGoogleFont(
                                     'Kanit',
-                                    fontSize: 12,
+                                    fontSize: 12 * ffem,
                                     fontWeight: FontWeight.w400,
                                     height: 1.495,
                                     color: const Color(0xff76777E),

@@ -25,8 +25,8 @@ class IntroductionScreen extends StatefulWidget {
   State<IntroductionScreen> createState() => _IntroductionScreenState();
 }
 
-class _IntroductionScreenState extends AppState<IntroductionScreen, IntroductionViewModel> {
-
+class _IntroductionScreenState
+    extends AppState<IntroductionScreen, IntroductionViewModel> {
   _onPageChanged(int index) {
     viewModel.currentPage.value = index;
   }
@@ -130,7 +130,8 @@ class _IntroductionScreenState extends AppState<IntroductionScreen, Introduction
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => const SignUpScreen()),
+                                        builder: (context) =>
+                                            const SignUpScreen()),
                                   );
                                 },
                                 child: const Text(
@@ -164,7 +165,8 @@ class _IntroductionScreenState extends AppState<IntroductionScreen, Introduction
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => const SignInScreen()),
+                                        builder: (context) =>
+                                            const SignInScreen()),
                                   );
                                 },
                                 child: const Text(
@@ -210,7 +212,8 @@ class IntroductionViewModel extends GetxController {
   Future getIntroduction() async {
     loading.value = true;
     var response = await dio.get('introductions');
-    IntroductionResponse introductionResponse = IntroductionResponse.fromJson(response.data);
+    IntroductionResponse introductionResponse =
+        IntroductionResponse.fromJson(response.data);
     introductionList.value = introductionResponse.result ?? [];
 
     // timer = Timer.periodic(Duration(seconds: 5), (Timer timer) {
