@@ -5,6 +5,7 @@ import 'package:we_link/marketplace/pages/marketplace.dart';
 import 'package:we_link/views/home_screen.dart';
 
 import '../../components/home/homeComponents/home_menu_section.dart';
+import '../pages/searchmarket.dart';
 
 //header for markethome (2 back icon)
 class Header extends StatelessWidget {
@@ -120,66 +121,75 @@ class Header extends StatelessWidget {
                     ),
                   ],
                 ),
-                child: Container(
-                  // taxirowS1C (1:214)
-                  width: double.infinity,
-                  height: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(14 * fem),
-                  ),
-                  child: Center(
-                    // rectangle8at6 (1:215)
-                    child: SizedBox(
-                      width: double.infinity,
-                      height: 40 * fem,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(14 * fem),
-                          border: Border.all(color: const Color(0xffefeff4)),
-                          color: const Color(0xffffffff),
-                        ),
-                        child: SizedBox(
-                          width: double.infinity,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => MarketHomeSearchScreen()),
+                    );
+                  },
+                  child: Container(
+                    // taxirowS1C (1:214)
+                    width: double.infinity,
+                    height: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(14 * fem),
+                    ),
+                    child: Center(
+                      // rectangle8at6 (1:215)
+                      child: SizedBox(
+                        width: double.infinity,
+                        height: 40 * fem,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(14 * fem),
+                            border: Border.all(color: const Color(0xffefeff4)),
+                            color: const Color(0xffffffff),
+                          ),
                           child: SizedBox(
-                            // group33980VZ8 (1:225)
                             width: double.infinity,
-                            height: 19 * fem,
-                            child: Row(
-                              children: [
-                                SizedBox(
-                                  width: 15,
-                                ),
-                                Center(
-                                  child: RichText(
-                                    text: TextSpan(
-                                      style: SafeGoogleFont(
-                                        'Inter',
-                                        fontSize: 15 * ffem,
-                                        fontWeight: FontWeight.w600,
-                                        height: 1.2125 * ffem / fem,
-                                        letterSpacing: -0.3 * fem,
-                                        color: const Color(0xff000000),
-                                      ),
-                                      children: [
-                                        const TextSpan(
-                                          text: 'l Find products ',
+                            child: SizedBox(
+                              // group33980VZ8 (1:225)
+                              width: double.infinity,
+                              height: 19 * fem,
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    width: 15,
+                                  ),
+                                  Center(
+                                    child: RichText(
+                                      text: TextSpan(
+                                        style: SafeGoogleFont(
+                                          'Inter',
+                                          fontSize: 15 * ffem,
+                                          fontWeight: FontWeight.w600,
+                                          height: 1.2125 * ffem / fem,
+                                          letterSpacing: -0.3 * fem,
+                                          color: const Color(0xff000000),
                                         ),
-                                        TextSpan(
-                                          text: 'new',
-                                          style: SafeGoogleFont(
-                                            'Inter',
-                                            fontSize: 15 * ffem,
-                                            fontWeight: FontWeight.w600,
-                                            height: 1.2125 * ffem / fem,
-                                            letterSpacing: -0.3 * fem,
-                                            color: const Color(0xfffdcd03),
+                                        children: [
+                                          const TextSpan(
+                                            text: 'l Find products ',
                                           ),
-                                        ),
-                                      ],
+                                          TextSpan(
+                                            text: 'new',
+                                            style: SafeGoogleFont(
+                                              'Inter',
+                                              fontSize: 15 * ffem,
+                                              fontWeight: FontWeight.w600,
+                                              height: 1.2125 * ffem / fem,
+                                              letterSpacing: -0.3 * fem,
+                                              color: const Color(0xfffdcd03),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ),
                         ),

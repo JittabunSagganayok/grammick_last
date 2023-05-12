@@ -33,14 +33,14 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends AppState<HomeScreen, HomeViewModel> {
   @override
   HomeViewModel initViewModel(HomeViewModel viewModel) {
-
     viewModel.packageSelected.listen((result) {
-      if (result.id != null ) {
+      if (result.id != null) {
         Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => WeLinkToGoScreen(currentTabSelected: 2,packageSelected : result)),
-        ).then((value){
+              builder: (context) => WeLinkToGoScreen(
+                  currentTabSelected: 2, packageSelected: result)),
+        ).then((value) {
           viewModel.packageSelected.value = VehiclePromotion();
         });
       }
@@ -163,8 +163,9 @@ class HomeViewModel extends GetxController {
     var couponListResponse = CouponListResponse.fromJson(response[2].data);
 
     var data = couponListResponse.result?.where((element) {
-      return element.customers?.contains(userProfile.value.id) == false;
-    }).toList() ?? [];
+          return element.customers?.contains(userProfile.value.id) == false;
+        }).toList() ??
+        [];
 
     couponList.value = data;
 
