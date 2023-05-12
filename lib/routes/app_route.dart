@@ -34,7 +34,6 @@ class AppRoute {
       name: ReportProblemScreen.screen,
       page: () => ReportProblemScreen(),
     ));
-
   }
 
   get screens => _screens;

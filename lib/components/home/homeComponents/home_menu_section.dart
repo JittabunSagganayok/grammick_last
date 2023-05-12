@@ -5,6 +5,7 @@ import 'package:we_link/constant/stylesConstants.dart';
 import 'package:we_link/feature/we_service/route/we_service_route.dart';
 
 import '../../../feature/assistant/ui/we_assistant_screen.dart';
+import '../../../marketplace/pages/Condition.dart';
 
 class HomeMenuSection extends StatelessWidget {
   const HomeMenuSection({Key? key}) : super(key: key);
@@ -22,7 +23,8 @@ class HomeMenuSection extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => WeLinkToGoScreen(valueSelectedIndex: 0)),
+                      builder: (context) =>
+                          WeLinkToGoScreen(valueSelectedIndex: 0)),
                 );
               },
               child: Column(
@@ -74,7 +76,9 @@ class HomeMenuSection extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => WeLinkToGoScreen(currentTabSelected: 2,)),
+                      builder: (context) => WeLinkToGoScreen(
+                            currentTabSelected: 2,
+                          )),
                 );
               },
               child: Column(
@@ -117,6 +121,36 @@ class HomeMenuSection extends StatelessWidget {
               ),
               onTap: () {
                 navigator?.pushNamed(WeServiceRoute.weServiceScreen);
+              },
+            ),
+          ),
+          Expanded(
+            child: InkWell(
+              child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(bottom: 10),
+                    child: Image.asset(
+                      'assets/images/menu6.png',
+                      fit: BoxFit.contain,
+                      height: 45,
+                      width: 45,
+                    ),
+                  ),
+                  Text(
+                    'MarketPlace',
+                    style: menuTextStyle, 
+                  ),
+                ],
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ConditionScreen(
+                            title: 'Condition',
+                          )),
+                );
               },
             ),
           ),

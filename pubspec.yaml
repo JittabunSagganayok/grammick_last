@@ -106,6 +106,7 @@ dependencies:
   flutter_local_notifications: 14.0.0-dev.4
   overlay_support: ^2.1.0
   flutter_html: ^3.0.0-alpha.6
+  video_player: ^2.6.1
 
 flutter_icons:
   ios: true
@@ -152,6 +153,8 @@ flutter:
     - assets/ic_we_fix.svg
     - assets/ic_launcher.png
     - assets/icons/ic_account_management.svg
+    - assets/marketplace/images/
+    - assets/marketplace/video/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
