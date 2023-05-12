@@ -27,6 +27,7 @@ class _DetailScreenState extends State<DetailScreen> {
     setdatafordetail();
   }
 
+//set list for slider image
   void setdatafordetail() {
     setState(() {
       switch (widget.imageDatax['title']) {
@@ -65,6 +66,9 @@ class _DetailScreenState extends State<DetailScreen> {
     double h1 = ((250 * (imagescardList.length) / 2) + 4) * fem;
     var imagetitle = widget.imageDatax['title'];
     var imageprice = widget.imageDatax['price'];
+    var sellername = widget.imageDatax['sellername'];
+    var sellerphone = widget.imageDatax['sellerphone'];
+    var sellerdetail = widget.imageDatax['sellerdetail'];
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -226,76 +230,81 @@ class _DetailScreenState extends State<DetailScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    SizedBox(
-                      width: 332 * fem,
-                      child: Container(
-                        // group34223aWa (1:249)
-                        padding: EdgeInsets.fromLTRB(16, 14, 16, 14),
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: const Color(0xffF7F7F7),
-                          //color: Colors.amber,
-                          borderRadius: BorderRadius.circular(20 * fem),
-                        ),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              // iconVNe (1:251)
+                    GestureDetector(
+                      onTap: () {
+                        showDialogFuncCallout(context);
+                      },
+                      child: SizedBox(
+                        width: 332 * fem,
+                        child: Container(
+                          // group34223aWa (1:249)
+                          padding: EdgeInsets.fromLTRB(16, 14, 16, 14),
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffF7F7F7),
+                            //color: Colors.amber,
+                            borderRadius: BorderRadius.circular(20 * fem),
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SizedBox(
+                                // iconVNe (1:251)
 
-                              width: 35 * fem,
-                              height: 35 * fem,
-                              child: Image.asset(
-                                'assets/marketplace/images/Ellipse 59.png',
                                 width: 35 * fem,
                                 height: 35 * fem,
+                                child: Image.asset(
+                                  'assets/marketplace/images/Ellipse 59.png',
+                                  width: 35 * fem,
+                                  height: 35 * fem,
+                                ),
                               ),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Hali Parker",
-                                  style: SafeGoogleFont(
-                                    'Kanit',
-                                    fontSize: 13 * ffem,
-                                    fontWeight: FontWeight.w500,
-                                    height: 1.495,
-                                    color: const Color(0xff1B1D28),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    sellername,
+                                    style: SafeGoogleFont(
+                                      'Kanit',
+                                      fontSize: 13 * ffem,
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.495,
+                                      color: const Color(0xff1B1D28),
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
                                   ),
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                                Text(
-                                  "089-912-2933",
-                                  style: SafeGoogleFont(
-                                    'Kanit',
-                                    fontSize: 12 * ffem,
-                                    fontWeight: FontWeight.w400,
-                                    height: 1.495,
-                                    color: const Color(0xff76777E),
+                                  Text(
+                                    sellerphone,
+                                    style: SafeGoogleFont(
+                                      'Kanit',
+                                      fontSize: 12 * ffem,
+                                      fontWeight: FontWeight.w400,
+                                      height: 1.495,
+                                      color: const Color(0xff76777E),
+                                    ),
+                                    overflow: TextOverflow.ellipsis,
                                   ),
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ],
-                            ),
-                            Expanded(
-                              child: SizedBox(),
-                            ),
-                            SizedBox(
-                              // iconVNe (1:251)
+                                ],
+                              ),
+                              Expanded(
+                                child: SizedBox(),
+                              ),
+                              SizedBox(
+                                // iconVNe (1:251)
 
-                              width: 35 * fem,
-                              height: 35 * fem,
-                              child: Image.asset(
-                                'assets/marketplace/images/Group-34225.png',
                                 width: 35 * fem,
                                 height: 35 * fem,
+                                child: Image.asset(
+                                  'assets/marketplace/images/Group-34225.png',
+                                  width: 35 * fem,
+                                  height: 35 * fem,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -303,25 +312,30 @@ class _DetailScreenState extends State<DetailScreen> {
                       // iconVNe (1:251)
                       height: 13,
                     ),
-                    Stack(
-                      children: [
-                        SizedBox(
-                          // iconVNe (1:251)
+                    GestureDetector(
+                      onTap: () {
+                        showDialogFuncMap(context);
+                      },
+                      child: Stack(
+                        children: [
+                          SizedBox(
+                            // iconVNe (1:251)
 
-                          width: 338 * fem,
-                          height: 74 * fem,
-                          child: Image.asset(
-                            'assets/marketplace/images/Rectangle-4477.png',
+                            width: 338 * fem,
+                            height: 74 * fem,
+                            child: Image.asset(
+                              'assets/marketplace/images/Rectangle-4477.png',
+                              width: 338 * fem,
+                              height: 74 * fem,
+                            ),
+                          ),
+                          Image.asset(
+                            'assets/marketplace/images/Group-7141.png',
                             width: 338 * fem,
                             height: 74 * fem,
                           ),
-                        ),
-                        Image.asset(
-                          'assets/marketplace/images/Group-7141.png',
-                          width: 338 * fem,
-                          height: 74 * fem,
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                     SizedBox(
                       // iconVNe (1:251)
@@ -372,7 +386,7 @@ class _DetailScreenState extends State<DetailScreen> {
                             ],
                           ),
                           Text(
-                            'Hali Parker is a contemporary clothing brand, devoted to creating garments that are perfect for everyday wear. Each and every garment is designed to be long- lasting, functional and timeless, with a promise to ... More',
+                            sellerdetail,
                             style: SafeGoogleFont(
                               'Kanit',
                               fontSize: 12 * ffem,
@@ -476,6 +490,182 @@ showDialogFunc(context, imageDatax) {
                     children: <Widget>[
                       Text(
                         "Report this post",
+                        style: SafeGoogleFont(
+                          'Kanit',
+                          fontSize: 14 * fem,
+                          fontWeight: FontWeight.w500,
+                          color: const Color(0xffffffff),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10 * ffem,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pop(context, true);
+            },
+            child: Center(
+              child: Material(
+                type: MaterialType.transparency,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: const Color(0xff232323),
+                  ),
+                  padding: EdgeInsets.all(0),
+                  height: 47 * fem,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Cancel",
+                        style: SafeGoogleFont(
+                          'Kanit',
+                          fontSize: 14 * fem,
+                          fontWeight: FontWeight.w300,
+                          color: const Color(0xffffffff),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          )
+        ],
+      );
+    },
+  );
+}
+
+showDialogFuncMap(context) {
+  double baseWidth = 375;
+  double fem = MediaQuery.of(context).size.width / baseWidth;
+  double ffem = fem * 0.97;
+  return showDialog(
+    context: context,
+    builder: (context) {
+      return Column(
+        children: [
+          Expanded(child: SizedBox()),
+          GestureDetector(
+            onTap: () {},
+            child: Center(
+              child: Material(
+                type: MaterialType.transparency,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: const Color(0xffff855e),
+                  ),
+                  padding: EdgeInsets.all(0),
+                  height: 47 * fem,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Open on Google Maps",
+                        style: SafeGoogleFont(
+                          'Kanit',
+                          fontSize: 14 * fem,
+                          fontWeight: FontWeight.w500,
+                          color: const Color(0xffffffff),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10 * ffem,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pop(context, true);
+            },
+            child: Center(
+              child: Material(
+                type: MaterialType.transparency,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: const Color(0xff232323),
+                  ),
+                  padding: EdgeInsets.all(0),
+                  height: 47 * fem,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Cancel",
+                        style: SafeGoogleFont(
+                          'Kanit',
+                          fontSize: 14 * fem,
+                          fontWeight: FontWeight.w300,
+                          color: const Color(0xffffffff),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          )
+        ],
+      );
+    },
+  );
+}
+
+showDialogFuncCallout(context) {
+  double baseWidth = 375;
+  double fem = MediaQuery.of(context).size.width / baseWidth;
+  double ffem = fem * 0.97;
+  return showDialog(
+    context: context,
+    builder: (context) {
+      return Column(
+        children: [
+          Expanded(child: SizedBox()),
+          GestureDetector(
+            onTap: () {},
+            child: Center(
+              child: Material(
+                type: MaterialType.transparency,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: const Color(0xff232323),
+                  ),
+                  padding: EdgeInsets.all(0),
+                  height: 47 * fem,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Call. 089-912-2933",
                         style: SafeGoogleFont(
                           'Kanit',
                           fontSize: 14 * fem,

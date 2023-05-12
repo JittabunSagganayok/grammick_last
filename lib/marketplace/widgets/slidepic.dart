@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:we_link/marketplace/data/data.dart';
+import 'package:we_link/marketplace/pages/picture4.dart';
 
 class SliderScreen extends StatefulWidget {
   const SliderScreen({super.key});
@@ -138,18 +139,25 @@ class _SliderScreendetailState extends State<SliderScreendetail> {
                     (item) => SizedBox(
                       width: double.infinity,
                       height: 314 * fem,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          // borderRadius: BorderRadius.circular(13 * fem),
-                          // border: Border.all(color: const Color(0xffefeff4)),
-                          // color: const Color(0x4c000000),
-                          image: DecorationImage(
-                            //scale: 0.1,
-                            //alignment: Alignment(0, -0.3),
-                            fit: BoxFit.cover,
-
-                            image: AssetImage(
-                              item['image_path'],
+                      child: GestureDetector(
+                        onTap: () {
+                          print("current Index");
+                          print(currentIndex);
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Pic4Screen(
+                                      imagepath: item['image_path'],
+                                    )),
+                          );
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(
+                                item['image_path'],
+                              ),
                             ),
                           ),
                         ),

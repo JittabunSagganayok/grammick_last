@@ -44,7 +44,9 @@ List<Map<String, dynamic>> imagescardList = [
     "sellerphone": "089-912-2933",
     "sellerlocation":
         "The Mall Bangkapi There are many variations of passages of Lorem Ipsum available, but the ",
-    "sellerprovince": "(Bangkok 30km)"
+    "sellerprovince": "(Bangkok 30km)",
+    "sellerdetail":
+        "Hali Parker is a contemporary clothing brand, devoted to creating garments that are perfect for everyday wear. Each and every garment is designed to be long- lasting, functional and timeless, with a promise to ... More"
   },
   {
     "id": "2",
@@ -55,7 +57,9 @@ List<Map<String, dynamic>> imagescardList = [
     "sellerphone": "089-912-2933",
     "sellerlocation":
         "The Mall Bangkapi There are many variations of passages of Lorem Ipsum available, but the ",
-    "sellerprovince": "(Bangkok 30km)"
+    "sellerprovince": "(Bangkok 30km)",
+    "sellerdetail":
+        "Hali Parker is a contemporary clothing brand, devoted to creating garments that are perfect for everyday wear. Each and every garment is designed to be long- lasting, functional and timeless, with a promise to ... More"
   },
   {
     "id": "3",
@@ -66,7 +70,9 @@ List<Map<String, dynamic>> imagescardList = [
     "sellerphone": "089-912-2933",
     "sellerlocation":
         "The Mall Bangkapi There are many variations of passages of Lorem Ipsum available, but the ",
-    "sellerprovince": "(Bangkok 30km)"
+    "sellerprovince": "(Bangkok 30km)",
+    "sellerdetail":
+        "Hali Parker is a contemporary clothing brand, devoted to creating garments that are perfect for everyday wear. Each and every garment is designed to be long- lasting, functional and timeless, with a promise to ... More"
   },
   {
     "id": "4",
@@ -77,7 +83,9 @@ List<Map<String, dynamic>> imagescardList = [
     "sellerphone": "089-912-2933",
     "sellerlocation":
         "The Mall Bangkapi There are many variations of passages of Lorem Ipsum available, but the ",
-    "sellerprovince": "(Bangkok 30km)"
+    "sellerprovince": "(Bangkok 30km)",
+    "sellerdetail":
+        "Hali Parker is a contemporary clothing brand, devoted to creating garments that are perfect for everyday wear. Each and every garment is designed to be long- lasting, functional and timeless, with a promise to ... More"
   },
   {
     "id": "5",
@@ -88,7 +96,9 @@ List<Map<String, dynamic>> imagescardList = [
     "sellerphone": "089-912-2933",
     "sellerlocation":
         "The Mall Bangkapi There are many variations of passages of Lorem Ipsum available, but the ",
-    "sellerprovince": "(Bangkok 30km)"
+    "sellerprovince": "(Bangkok 30km)",
+    "sellerdetail":
+        "Hali Parker is a contemporary clothing brand, devoted to creating garments that are perfect for everyday wear. Each and every garment is designed to be long- lasting, functional and timeless, with a promise to ... More"
   },
   {
     "id": "6",
@@ -99,7 +109,9 @@ List<Map<String, dynamic>> imagescardList = [
     "sellerphone": "089-912-2933",
     "sellerlocation":
         "The Mall Bangkapi There are many variations of passages of Lorem Ipsum available, but the ",
-    "sellerprovince": "(Bangkok 30km)"
+    "sellerprovince": "(Bangkok 30km)",
+    "sellerdetail":
+        "Hali Parker is a contemporary clothing brand, devoted to creating garments that are perfect for everyday wear. Each and every garment is designed to be long- lasting, functional and timeless, with a promise to ... More"
   },
 ];
 

@@ -6,6 +6,8 @@ import 'package:we_link/marketplace/fonts/utils.dart';
 import 'package:we_link/marketplace/widgets/header.dart';
 import 'package:we_link/marketplace/widgets/imagecard.dart';
 
+import 'detail.dart';
+
 class InformationScreen extends StatefulWidget {
   InformationScreen({super.key, required this.imageDataxinfo});
 
@@ -98,26 +100,31 @@ class _InformationScreenState extends State<InformationScreen> {
                     const SizedBox(
                       height: 18,
                     ),
-                    Stack(
-                      children: [
-                        SizedBox(
-                          // iconVNe (1:251)
+                    GestureDetector(
+                      onTap: () {
+                        showDialogFuncMap(context);
+                      },
+                      child: Stack(
+                        children: [
+                          SizedBox(
+                            // iconVNe (1:251)
 
-                          width: 335 * fem,
-                          height: 125 * fem,
-                          child: Image.asset(
-                            'assets/marketplace/images/Rectangle 4477.png',
                             width: 335 * fem,
                             height: 125 * fem,
-                            fit: BoxFit.fill,
+                            child: Image.asset(
+                              'assets/marketplace/images/Rectangle 4477.png',
+                              width: 335 * fem,
+                              height: 125 * fem,
+                              fit: BoxFit.fill,
+                            ),
                           ),
-                        ),
-                        Image.asset(
-                          'assets/marketplace/images/Group-7141.png',
-                          width: 338 * fem,
-                          height: 74 * fem,
-                        ),
-                      ],
+                          Image.asset(
+                            'assets/marketplace/images/Group-7141.png',
+                            width: 338 * fem,
+                            height: 74 * fem,
+                          ),
+                        ],
+                      ),
                     ),
                     SizedBox(
                       height: 18,
@@ -199,7 +206,7 @@ class _InformationScreenState extends State<InformationScreen> {
                                     'Phone',
                                     style: SafeGoogleFont(
                                       'Kanit',
-                                      fontSize: 12 * fem,
+                                      fontSize: 12 * ffem,
                                       fontWeight: FontWeight.w300,
                                       letterSpacing: -0.3000000119 * fem,
                                       color: const Color(0xff4D4D4D),
@@ -207,14 +214,19 @@ class _InformationScreenState extends State<InformationScreen> {
                                   ),
                                 ),
                                 Expanded(child: SizedBox()),
-                                Text(
-                                  sellerphone,
-                                  style: SafeGoogleFont(
-                                    'Kanit',
-                                    fontSize: 12 * fem,
-                                    fontWeight: FontWeight.w700,
-                                    letterSpacing: -0.3000000119 * fem,
-                                    color: const Color(0xffFF855E),
+                                GestureDetector(
+                                  onTap: () {
+                                    showDialogFuncCallout(context);
+                                  },
+                                  child: Text(
+                                    sellerphone,
+                                    style: SafeGoogleFont(
+                                      'Kanit',
+                                      fontSize: 12 * ffem,
+                                      fontWeight: FontWeight.w700,
+                                      letterSpacing: -0.3000000119 * fem,
+                                      color: const Color(0xffFF855E),
+                                    ),
                                   ),
                                 ),
                               ],
@@ -304,6 +316,182 @@ showDialogFunc(context, imageDatax) {
                     children: <Widget>[
                       Text(
                         "Report this post",
+                        style: SafeGoogleFont(
+                          'Kanit',
+                          fontSize: 14 * fem,
+                          fontWeight: FontWeight.w500,
+                          color: const Color(0xffffffff),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10 * ffem,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pop(context, true);
+            },
+            child: Center(
+              child: Material(
+                type: MaterialType.transparency,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: const Color(0xff232323),
+                  ),
+                  padding: EdgeInsets.all(0),
+                  height: 47 * fem,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Cancel",
+                        style: SafeGoogleFont(
+                          'Kanit',
+                          fontSize: 14 * fem,
+                          fontWeight: FontWeight.w300,
+                          color: const Color(0xffffffff),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          )
+        ],
+      );
+    },
+  );
+}
+
+showDialogFuncMap(context) {
+  double baseWidth = 375;
+  double fem = MediaQuery.of(context).size.width / baseWidth;
+  double ffem = fem * 0.97;
+  return showDialog(
+    context: context,
+    builder: (context) {
+      return Column(
+        children: [
+          Expanded(child: SizedBox()),
+          GestureDetector(
+            onTap: () {},
+            child: Center(
+              child: Material(
+                type: MaterialType.transparency,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: const Color(0xffff855e),
+                  ),
+                  padding: EdgeInsets.all(0),
+                  height: 47 * fem,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Open on Google Maps",
+                        style: SafeGoogleFont(
+                          'Kanit',
+                          fontSize: 14 * fem,
+                          fontWeight: FontWeight.w500,
+                          color: const Color(0xffffffff),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10 * ffem,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pop(context, true);
+            },
+            child: Center(
+              child: Material(
+                type: MaterialType.transparency,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: const Color(0xff232323),
+                  ),
+                  padding: EdgeInsets.all(0),
+                  height: 47 * fem,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Cancel",
+                        style: SafeGoogleFont(
+                          'Kanit',
+                          fontSize: 14 * fem,
+                          fontWeight: FontWeight.w300,
+                          color: const Color(0xffffffff),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          )
+        ],
+      );
+    },
+  );
+}
+
+c(context) {
+  double baseWidth = 375;
+  double fem = MediaQuery.of(context).size.width / baseWidth;
+  double ffem = fem * 0.97;
+  return showDialog(
+    context: context,
+    builder: (context) {
+      return Column(
+        children: [
+          Expanded(child: SizedBox()),
+          GestureDetector(
+            onTap: () {},
+            child: Center(
+              child: Material(
+                type: MaterialType.transparency,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: const Color(0xff232323),
+                  ),
+                  padding: EdgeInsets.all(0),
+                  height: 47 * fem,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Call. 089-912-2933",
                         style: SafeGoogleFont(
                           'Kanit',
                           fontSize: 14 * fem,
