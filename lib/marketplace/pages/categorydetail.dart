@@ -10,16 +10,14 @@ import 'package:we_link/marketplace/widgets/header.dart';
 import '../data/data.dart';
 import '../widgets/imagecard.dart';
 
-class SearchResultScreen extends StatefulWidget {
-  SearchResultScreen({super.key, required this.search});
-
-  var search;
+class CategoryDetailScreen extends StatefulWidget {
+  CategoryDetailScreen({super.key});
 
   @override
-  State<SearchResultScreen> createState() => _SearchResultScreenState();
+  State<CategoryDetailScreen> createState() => _CategoryDetailScreenState();
 }
 
-class _SearchResultScreenState extends State<SearchResultScreen> {
+class _CategoryDetailScreenState extends State<CategoryDetailScreen> {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 375;
@@ -55,14 +53,10 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                     autofocus: true,
                     keyboardType: TextInputType.text,
                     decoration: InputDecoration(
-                        hintText: widget.search,
+                        hintText: 'Search',
                         fillColor: Colors.white,
                         filled: true,
-                        hintStyle: TextStyle(
-                            color: Color(0xFF212B32),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                            fontFamily: 'Kanit'),
+                        hintStyle: hintTextStyle,
                         contentPadding: fieldPadding,
                         enabledBorder: searchBoder,
                         focusedBorder: searchBoder,
@@ -140,13 +134,13 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                                     width: double.infinity,
                                     height: double.infinity,
                                     decoration: BoxDecoration(
-                                      color: const Color(0xff189B58),
+                                      color: const Color(0xfff8f8f8),
                                       borderRadius:
                                           BorderRadius.circular(10 * fem),
                                     ),
                                     child: Center(
                                       child: Image.asset(
-                                        'assets/marketplace/images/filtersearchresult.png',
+                                        'assets/marketplace/images/filtersearchresult2.png',
                                         fit: BoxFit.contain,
                                         height: 16,
                                         width: 43,
@@ -282,10 +276,16 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                       ),
                       Row(
                         children: [
-                          Image.asset(
-                            "assets/marketplace/images/price.png",
-                            width: 134,
-                            height: 27,
+                          Text(
+                            'Foodie',
+                            style: SafeGoogleFont(
+                              'Kanit',
+                              fontSize: 15 * ffem,
+                              fontWeight: FontWeight.w500,
+                              height: 1.495 * ffem / fem,
+                              letterSpacing: -0.22 * fem,
+                              color: const Color(0xff000000),
+                            ),
                           ),
                         ],
                       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:we_link/marketplace/fonts/utils.dart';
+import 'package:we_link/marketplace/pages/categorydetail.dart';
 
 class Fivemenu extends StatelessWidget {
   const Fivemenu({super.key});
@@ -23,37 +24,46 @@ class Fivemenu extends StatelessWidget {
               margin:
                   EdgeInsets.fromLTRB(0 * fem, 0 * fem, 26.8 * fem, 0 * fem),
               height: 71 * fem,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    // autogroup4wqzyux (Q1dPV2BMhXfs7BuraE4wQz)
-                    margin: EdgeInsets.fromLTRB(
-                        0 * fem, 0 * fem, 0 * fem, 9.8 * fem),
-                    width: 44.2 * fem,
-                    height: 44.2 * fem,
-                    child: Image.asset(
-                      'assets/marketplace/images/auto-group-4wqz.png',
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => CategoryDetailScreen()),
+                  );
+                },
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      // autogroup4wqzyux (Q1dPV2BMhXfs7BuraE4wQz)
+                      margin: EdgeInsets.fromLTRB(
+                          0 * fem, 0 * fem, 0 * fem, 9.8 * fem),
                       width: 44.2 * fem,
                       height: 44.2 * fem,
-                    ),
-                  ),
-                  Container(
-                    // foodietX8 (1:313)
-                    margin: EdgeInsets.fromLTRB(
-                        0 * fem, 0 * fem, 0.5 * fem, 0 * fem),
-                    child: Text(
-                      'Foodie',
-                      style: SafeGoogleFont(
-                        'Kanit',
-                        fontSize: 11 * ffem,
-                        fontWeight: FontWeight.w400,
-                        height: 1.495 * ffem / fem,
-                        color: const Color(0xff494949),
+                      child: Image.asset(
+                        'assets/marketplace/images/auto-group-4wqz.png',
+                        width: 44.2 * fem,
+                        height: 44.2 * fem,
                       ),
                     ),
-                  ),
-                ],
+                    Container(
+                      // foodietX8 (1:313)
+                      margin: EdgeInsets.fromLTRB(
+                          0 * fem, 0 * fem, 0.5 * fem, 0 * fem),
+                      child: Text(
+                        'Foodie',
+                        style: SafeGoogleFont(
+                          'Kanit',
+                          fontSize: 11 * ffem,
+                          fontWeight: FontWeight.w400,
+                          height: 1.495 * ffem / fem,
+                          color: const Color(0xff494949),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             Container(
