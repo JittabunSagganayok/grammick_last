@@ -5,6 +5,7 @@ import 'package:we_link/constant/colosrConstants.dart';
 import 'package:we_link/constant/stylesConstants.dart';
 import 'package:we_link/marketplace/fonts/utils.dart';
 import 'package:we_link/marketplace/pages/marketplace.dart';
+import 'package:we_link/marketplace/pages/searchresult.dart';
 import 'package:we_link/marketplace/widgets/header.dart';
 
 import '../data/data.dart';
