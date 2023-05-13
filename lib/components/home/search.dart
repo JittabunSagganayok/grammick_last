@@ -141,129 +141,129 @@ class _HomeSearchScreenState
                                 style: resultText,
                               ),
                             ),
-                      Obx(() {
-                        if (viewModel.locationNotFound.value == true) {
-                          return SizedBox(
-                            height: Get.height / 2,
-                            child: LocationNotFoundScreen(),
-                          );
-                        }
-                        if (viewModel.searching.value == false &&
-                            viewModel.addressList.isEmpty == true) {
-                          return bodySearchLo(
-                            showMore: false,
-                            favList: viewModel.favList,
-                            recentList: viewModel.recentList,
-                            onClickListener: (item) {
-                              viewModel.setAddressSelected(item);
-                            },
-                            onClickBookmark: (item) {},
-                          );
-                        } else {
-                          if (viewModel.searching.value == true) {
-                            return SizedBox(
-                              height: Get.height / 2,
-                              child: const Center(
-                                  child: CircularProgressIndicator(
-                                color: yellowColor,
-                              )),
-                            );
-                          } else {
-                            return Container(
-                              decoration: const BoxDecoration(
-                                color: Colors.white,
-                              ),
-                              child: ListView.separated(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 16,
-                                  vertical: 16,
-                                ),
-                                shrinkWrap: true,
-                                primary: false,
-                                itemCount: viewModel.addressList.length,
-                                itemBuilder: (BuildContext context, int index) {
-                                  final item = viewModel.addressList[index];
-                                  return InkWell(
-                                    onTap: () {
-                                      viewModel.setAddressSelected(item);
-                                    },
-                                    child: Column(
-                                      children: [
-                                        Row(
-                                          children: [
-                                            Container(
-                                              child: Image.asset(
-                                                'assets/images/loca2.png',
-                                                fit: BoxFit.fill,
-                                                height: 29,
-                                                width: 19,
-                                              ),
-                                            ),
-                                            const SizedBox(
-                                              width: 13,
-                                            ),
-                                            Expanded(
-                                              child: Column(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Container(
-                                                    child: Text.rich(
-                                                      TextSpan(
-                                                        text: item.name ?? "",
-                                                        style: const TextStyle(
-                                                            color: Color(
-                                                                0xFF4B4B4B),
-                                                            fontSize: 14,
-                                                            fontWeight:
-                                                                FontWeight.w700,
-                                                            fontFamily:
-                                                                'Kanit'),
-                                                      ),
-                                                      maxLines: 1,
-                                                      overflow:
-                                                          TextOverflow.ellipsis,
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    child: Text.rich(
-                                                      TextSpan(
-                                                        text:
-                                                            item.address ?? "",
-                                                        style: const TextStyle(
-                                                            color: Color(
-                                                                0xFFACACAC),
-                                                            fontSize: 13,
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                            fontFamily:
-                                                                'Kanit'),
-                                                      ),
-                                                      maxLines: 1,
-                                                      overflow:
-                                                          TextOverflow.ellipsis,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  );
-                                },
-                                separatorBuilder:
-                                    (BuildContext context, int index) =>
-                                        const Divider(
-                                  height: 16,
-                                  color: Color(0xFFEEEEEE),
-                                ),
-                              ),
-                            );
-                          }
-                        }
-                      })
+                      // Obx(() {
+                      //   if (viewModel.locationNotFound.value == true) {
+                      //     return SizedBox(
+                      //       height: Get.height / 2,
+                      //       child: LocationNotFoundScreen(),
+                      //     );
+                      //   }
+                      //   if (viewModel.searching.value == false &&
+                      //       viewModel.addressList.isEmpty == true) {
+                      //     return bodySearchLo(
+                      //       showMore: false,
+                      //       favList: viewModel.favList,
+                      //       recentList: viewModel.recentList,
+                      //       onClickListener: (item) {
+                      //         viewModel.setAddressSelected(item);
+                      //       },
+                      //       onClickBookmark: (item) {},
+                      //     );
+                      //   } else {
+                      //     if (viewModel.searching.value == true) {
+                      //       return SizedBox(
+                      //         height: Get.height / 2,
+                      //         child: const Center(
+                      //             child: CircularProgressIndicator(
+                      //           color: yellowColor,
+                      //         )),
+                      //       );
+                      //     } else {
+                      //       return Container(
+                      //         decoration: const BoxDecoration(
+                      //           color: Colors.white,
+                      //         ),
+                      //         child: ListView.separated(
+                      //           padding: const EdgeInsets.symmetric(
+                      //             horizontal: 16,
+                      //             vertical: 16,
+                      //           ),
+                      //           shrinkWrap: true,
+                      //           primary: false,
+                      //           itemCount: viewModel.addressList.length,
+                      //           itemBuilder: (BuildContext context, int index) {
+                      //             final item = viewModel.addressList[index];
+                      //             return InkWell(
+                      //               onTap: () {
+                      //                 viewModel.setAddressSelected(item);
+                      //               },
+                      //               child: Column(
+                      //                 children: [
+                      //                   Row(
+                      //                     children: [
+                      //                       Container(
+                      //                         child: Image.asset(
+                      //                           'assets/images/loca2.png',
+                      //                           fit: BoxFit.fill,
+                      //                           height: 29,
+                      //                           width: 19,
+                      //                         ),
+                      //                       ),
+                      //                       const SizedBox(
+                      //                         width: 13,
+                      //                       ),
+                      //                       Expanded(
+                      //                         child: Column(
+                      //                           crossAxisAlignment:
+                      //                               CrossAxisAlignment.start,
+                      //                           children: [
+                      //                             Container(
+                      //                               child: Text.rich(
+                      //                                 TextSpan(
+                      //                                   text: item.name ?? "",
+                      //                                   style: const TextStyle(
+                      //                                       color: Color(
+                      //                                           0xFF4B4B4B),
+                      //                                       fontSize: 14,
+                      //                                       fontWeight:
+                      //                                           FontWeight.w700,
+                      //                                       fontFamily:
+                      //                                           'Kanit'),
+                      //                                 ),
+                      //                                 maxLines: 1,
+                      //                                 overflow:
+                      //                                     TextOverflow.ellipsis,
+                      //                               ),
+                      //                             ),
+                      //                             Container(
+                      //                               child: Text.rich(
+                      //                                 TextSpan(
+                      //                                   text:
+                      //                                       item.address ?? "",
+                      //                                   style: const TextStyle(
+                      //                                       color: Color(
+                      //                                           0xFFACACAC),
+                      //                                       fontSize: 13,
+                      //                                       fontWeight:
+                      //                                           FontWeight.w400,
+                      //                                       fontFamily:
+                      //                                           'Kanit'),
+                      //                                 ),
+                      //                                 maxLines: 1,
+                      //                                 overflow:
+                      //                                     TextOverflow.ellipsis,
+                      //                               ),
+                      //                             ),
+                      //                           ],
+                      //                         ),
+                      //                       ),
+                      //                     ],
+                      //                   ),
+                      //                 ],
+                      //               ),
+                      //             );
+                      //           },
+                      //           separatorBuilder:
+                      //               (BuildContext context, int index) =>
+                      //                   const Divider(
+                      //             height: 16,
+                      //             color: Color(0xFFEEEEEE),
+                      //           ),
+                      //         ),
+                      //       );
+                      //     }
+                      //   }
+                      // })
                     ],
                   ),
                 ),

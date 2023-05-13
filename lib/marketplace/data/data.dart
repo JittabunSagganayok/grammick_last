@@ -122,3 +122,26 @@ List<Map<String, dynamic>> vdo = [
         'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
   },
 ];
+
+List<Map<String, dynamic>> searchlist = [
+  {
+    "id": "1",
+    "title": "Audi 5",
+    "subtitle": "There are more than 10 revenues."
+  },
+  {
+    "id": "2",
+    "title": "Sammakorn",
+    "subtitle": "Ramkhamhaeng 112",
+  },
+  {
+    "id": "3",
+    "title": "Foodie Hops",
+    "subtitle": "There are more than 10 revenues.",
+  },
+  {
+    "id": "4",
+    "title": "Vios",
+    "subtitle": "There are more than 1.4k revenues.",
+  },
+];

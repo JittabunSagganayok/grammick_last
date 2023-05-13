@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:we_link/components/home/searchComponents/searchMenu.dart';
 import 'package:we_link/constant/colosrConstants.dart';
 import 'package:we_link/constant/stylesConstants.dart';
 import 'package:we_link/marketplace/fonts/utils.dart';
 import 'package:we_link/marketplace/pages/marketplace.dart';
 import 'package:we_link/marketplace/widgets/header.dart';
+
+import '../data/data.dart';
 
 class MarketHomeSearchScreen extends StatefulWidget {
   MarketHomeSearchScreen({
@@ -21,6 +25,7 @@ class _MarketHomeSearchScreenState extends State<MarketHomeSearchScreen> {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     double fontfem = fem * 0.85;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: blackColor,
@@ -53,6 +58,7 @@ class _MarketHomeSearchScreenState extends State<MarketHomeSearchScreen> {
                     keyboardType: TextInputType.text,
                     decoration: InputDecoration(
                         hintText: 'Search',
+                        //widget.search
                         fillColor: Colors.white,
                         filled: true,
                         hintStyle: hintTextStyle,
@@ -85,106 +91,138 @@ class _MarketHomeSearchScreenState extends State<MarketHomeSearchScreen> {
           ],
         )),
       ),
-      body: SingleChildScrollView(
-        child: Stack(
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                //Headernoicon(fem: fem, ffem: ffem, title: widget.title),
-
-                Container(
-                  padding:
-                      EdgeInsets.fromLTRB(18 * fem, 10 * fem, 3 * fem, 0 * fem),
-                  width: 375 * fem,
-                  //height: 732 * fem,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
+      body: Column(
+        children: [
+          Positioned(
+            right: 0,
+            left: 0,
+            top: 0,
+            child: Container(
+              width: MediaQuery.of(context).size.width * 1,
+              height: 25,
+              decoration: BoxDecoration(
+                color: blackColor,
+                borderRadius: BorderRadius.vertical(
+                  bottom: Radius.circular(30),
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Container(
+                margin: EdgeInsets.only(left: 20, right: 20),
+                child: Column(
+                  children: [
+                    Container(
+                      alignment: Alignment.topLeft,
+                      margin: EdgeInsets.only(top: 25, bottom: 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            // welinkmarketplaceBup (84:38)
-                            margin: EdgeInsets.fromLTRB(
-                                0 * fem, 0 * fem, 0 * fem, 5 * fem),
-                            child: Text(
-                              'เงื่อนไขการเข้าใช้งาน Welink Market place',
-                              style: SafeGoogleFont(
-                                'Kanit',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                height: 1.3125 * ffem / fem,
-                                letterSpacing: 0.16 * fem,
-                                color: Color(0xff010d29),
-                              ),
-                            ),
+                          Text(
+                            "Recent",
+                            style: resultText,
+                          ),
+                          Text(
+                            "Clear All",
+                            style: TextStyle(
+                                color: Color(0xFF172BB5),
+                                fontSize: 12,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: 'Kanit'),
                           ),
                         ],
                       ),
-                      Container(
-                        // loremipsumissimplydummytextoft (84:37)
-                        margin: EdgeInsets.fromLTRB(
-                            0 * fem, 0 * fem, 13 * fem, 0 * fem),
-                        constraints: BoxConstraints(
-                          maxWidth: 335 * fem,
-                        ),
-                        child: Text(
-                          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-                          style: SafeGoogleFont(
-                            'Kanit',
-                            fontSize: 13,
-                            fontWeight: FontWeight.w300,
-                            height: 1.7692307692 * ffem / fem,
-                            letterSpacing: 0.13 * fem,
-                            color: Color(0xff393939),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 60,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          //Modular.to.pushReplacementNamed('/home');
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => MarketHomeScreen()),
-                          );
-                        },
-                        child: Container(
-                          width: 333 * fem,
-                          height: 43 * fem,
-                          decoration: BoxDecoration(
-                            color: Color(0xff191919),
-                            borderRadius: BorderRadius.circular(25 * fem),
-                          ),
-                          child: Center(
-                            child: Text(
-                              'Accept',
-                              textAlign: TextAlign.right,
-                              style: SafeGoogleFont(
-                                'Kanit',
-                                fontSize: 15 * ffem,
-                                fontWeight: FontWeight.w500,
-                                height: 1.495 * ffem / fem,
-                                color: Color(0xffffffff),
+                    ),
+                    ListView.builder(
+                        scrollDirection: Axis.vertical,
+                        shrinkWrap: true,
+                        itemCount: searchlist.length,
+                        itemBuilder: ((context, index) => Container(
+                              width: double.infinity,
+                              // height: 500,
+                              child: Dismissible(
+                                key: ValueKey(searchlist[index]),
+                                background: Container(
+                                  alignment: Alignment.centerRight,
+                                  child: Image.asset(
+                                    'assets/marketplace/images/delete.png',
+                                    fit: BoxFit.contain,
+                                    height: 36,
+                                    width: 61,
+                                  ),
+                                ),
+                                child: Container(
+                                  // height: 100,
+                                  child: Padding(
+                                    padding: EdgeInsets.fromLTRB(0, 28, 0, 0),
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  SearchResultScreen(
+                                                      search: searchlist[index]
+                                                          ["title"])),
+                                        );
+                                      },
+                                      child: Row(
+                                        children: [
+                                          Image.asset(
+                                            'assets/marketplace/images/iconsearch.png',
+                                            fit: BoxFit.contain,
+                                            height: 18,
+                                            width: 18,
+                                          ),
+                                          SizedBox(
+                                            width: 20,
+                                          ),
+                                          Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                searchlist[index]["title"],
+                                                style: TextStyle(
+                                                    color: Color(0xFF212B32),
+                                                    fontSize: 14 * ffem,
+                                                    fontWeight: FontWeight.w700,
+                                                    fontFamily: 'Kanit'),
+                                              ),
+                                              Text(
+                                                searchlist[index]["subtitle"],
+                                                style: TextStyle(
+                                                    color: Color(0xFF979797),
+                                                    fontSize: 13 * ffem,
+                                                    fontWeight: FontWeight.w400,
+                                                    fontFamily: 'Kanit'),
+                                              ),
+                                            ],
+                                          ),
+                                          Expanded(child: SizedBox()),
+                                          Image.asset(
+                                            'assets/marketplace/images/arrowsearch.png',
+                                            fit: BoxFit.contain,
+                                            height: 18,
+                                            width: 18,
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
                               ),
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(height: 30)
-                    ],
-                  ),
+                            ))),
+                  ],
                 ),
-              ],
+              ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
