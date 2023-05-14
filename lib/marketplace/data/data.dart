@@ -145,3 +145,31 @@ List<Map<String, dynamic>> searchlist = [
     "subtitle": "There are more than 1.4k revenues.",
   },
 ];
+
+List<Map<String, dynamic>> categorylist = [
+  {
+    "id": "1",
+    "title": "Foodie",
+    "image": 'assets/marketplace/images/auto-group-4wqz.png',
+  },
+  {
+    "id": "2",
+    "title": "Assets",
+    "image": 'assets/marketplace/images/auto-group-fujc.png',
+  },
+  {
+    "id": "3",
+    "title": "Furniture",
+    "image": 'assets/marketplace/images/auto-group-qrp2.png',
+  },
+  {
+    "id": "4",
+    "title": "Verhicle",
+    "image": 'assets/marketplace/images/auto-group-zrse.png',
+  },
+  {
+    "id": "5",
+    "title": "Phone",
+    "image": 'assets/marketplace/images/auto-group-ntee.png',
+  },
+];

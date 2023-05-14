@@ -493,3 +493,89 @@ class Headernoicon extends StatelessWidget {
     );
   }
 }
+
+class Headernoiconforcategory extends StatelessWidget {
+  const Headernoiconforcategory({
+    super.key,
+    required this.fem,
+    required this.ffem,
+    required this.title,
+  });
+
+  final double fem;
+  final double ffem;
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Container(
+          width: 375 * fem,
+          height: 120 * fem,
+          decoration: const BoxDecoration(
+            shape: BoxShape.rectangle,
+            color: Colors.black,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30.0),
+              topRight: Radius.circular(30.0),
+              bottomLeft: Radius.circular(30.0),
+              bottomRight: Radius.circular(30.0),
+            ),
+          ),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 63,
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(18, 0, 18, 0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  //crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // group71484ii (1:222)
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Image.asset(
+                        'assets/marketplace/images/downarrow.png',
+                        width: 37 * fem,
+                        height: 37 * fem,
+                      ),
+                    ),
+                    Expanded(
+                      child: SizedBox(),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          title,
+                          style: SafeGoogleFont(
+                            'Kanit',
+                            fontSize: 22 * ffem,
+                            fontWeight: FontWeight.w600,
+                            height: 1.495 * ffem / fem,
+                            color: const Color(0xffffffff),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 37,
+                        )
+                      ],
+                    ),
+                    Expanded(
+                      child: SizedBox(),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
