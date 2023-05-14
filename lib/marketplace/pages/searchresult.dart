@@ -160,25 +160,26 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                             const Expanded(
                               child: SizedBox(),
                             ),
-                            SizedBox(
-                              width: 86 * fem,
-                              child: Container(
-                                // group342209sC (1:245)
-                                padding:
-                                    const EdgeInsets.fromLTRB(14, 5, 12, 5),
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xfff8f8f8),
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    GestureDetector(
-                                      onTap: () {
-                                        _showModalBottomSheet(context);
-                                      },
-                                      child: Container(
+                            GestureDetector(
+                              onTap: () {
+                                _showModalBottomSheet(context);
+                              },
+                              child: SizedBox(
+                                width: 86 * fem,
+                                child: Container(
+                                  // group342209sC (1:245)
+                                  padding:
+                                      const EdgeInsets.fromLTRB(14, 5, 12, 5),
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xfff8f8f8),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Container(
                                         // categoryGB8 (1:248)
                                         margin: const EdgeInsets.fromLTRB(
                                             0, 0, 6, 0),
@@ -194,20 +195,20 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    Container(
-                                      // icarrowright24xZk (1:247)
-                                      margin:
-                                          const EdgeInsets.fromLTRB(0, 1, 0, 0),
-                                      width: 10 * fem,
-                                      height: 10 * fem,
-                                      child: Image.asset(
-                                        'assets/marketplace/images/ic-arrow-right-24.png',
+                                      Container(
+                                        // icarrowright24xZk (1:247)
+                                        margin: const EdgeInsets.fromLTRB(
+                                            0, 1, 0, 0),
                                         width: 10 * fem,
                                         height: 10 * fem,
+                                        child: Image.asset(
+                                          'assets/marketplace/images/ic-arrow-right-24.png',
+                                          width: 10 * fem,
+                                          height: 10 * fem,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -334,9 +335,9 @@ void _showModalBottomSheet(BuildContext context) {
       top: Radius.circular(30),
     )),
     builder: (context) => DraggableScrollableSheet(
-        initialChildSize: 0.85,
-        maxChildSize: 0.85,
-        minChildSize: 0.85,
+        initialChildSize: 0.89,
+        maxChildSize: 0.89,
+        minChildSize: 0.89,
         expand: false,
         builder: (context, scrollController) {
           var searchlist = categorylist;
