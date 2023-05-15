@@ -28,7 +28,9 @@ class _SplashScreenState extends AppState<SplashScreen, SplashViewModel> {
     var accessToken = appStorage.read(KEY_ACCESS_TOKEN) ?? '';
     if (accessToken.isEmpty == true) {
       Future.delayed(Duration(seconds: 3)).then((value) {
-        Navigator.pushReplacement(context,
+        Navigator.pushReplacement(
+            context,
+            //MaterialPageRoute(builder: (context) => MainScreen()));
             MaterialPageRoute(builder: (context) => IntroductionScreen()));
       });
     } else {
@@ -40,7 +42,9 @@ class _SplashScreenState extends AppState<SplashScreen, SplashViewModel> {
             MaterialPageRoute(builder: (context) => MainScreen()),
           );
         } else {
-          Navigator.pushReplacement(context,
+          Navigator.pushReplacement(
+              context,
+              //MaterialPageRoute(builder: (context) => MainScreen()));
               MaterialPageRoute(builder: (context) => IntroductionScreen()));
         }
       });

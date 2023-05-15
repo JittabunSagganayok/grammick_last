@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -211,6 +210,7 @@ class IntroductionViewModel extends GetxController {
 
   Future getIntroduction() async {
     loading.value = true;
+
     var response = await dio.get('introductions');
     IntroductionResponse introductionResponse =
         IntroductionResponse.fromJson(response.data);

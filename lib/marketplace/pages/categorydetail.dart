@@ -28,294 +28,331 @@ class _CategoryDetailScreenState extends State<CategoryDetailScreen> {
     double h1 = ((250 * (imagescardList.length) / 2) + 4) * fem;
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: blackColor,
-        automaticallyImplyLeading: false,
-        elevation: 0,
-        centerTitle: false,
-        leading: Container(
-          margin: EdgeInsets.only(left: 5),
-          child: IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: Image.asset('assets/images/goBack.png'),
-          ),
-        ),
-        title: Container(
-            child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              child: Container(
-                  width: MediaQuery.of(context).size.width * 0.7,
-                  height: 43,
-                  child: TextFormField(
-                    autofocus: true,
-                    keyboardType: TextInputType.text,
-                    decoration: InputDecoration(
-                        hintText: 'Search',
-                        fillColor: Colors.white,
-                        filled: true,
-                        hintStyle: hintTextStyle,
-                        contentPadding: fieldPadding,
-                        enabledBorder: searchBoder,
-                        focusedBorder: searchBoder,
-                        prefixIcon: Padding(
-                          padding: EdgeInsets.all(0.0),
-                          child: Icon(
-                            Icons.search,
-                            color: Color(0xFF303030),
-                          ),
-                        ),
-                        suffixIcon: GestureDetector(
-                          child: Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Image.asset(
-                              'assets/images/close.png',
-                              fit: BoxFit.contain,
-                              height: 10,
-                              width: 10,
-                            ),
-                          ),
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                        )),
-                  )),
-            )
-          ],
-        )),
-      ),
-      body: Container(
-        color: Colors.white,
+      body: SingleChildScrollView(
         child: Column(
+          //mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Positioned(
-              right: 0,
-              left: 0,
-              top: 0,
-              child: Container(
-                width: MediaQuery.of(context).size.width * 1,
-                height: 25,
-                decoration: BoxDecoration(
-                  color: blackColor,
-                  borderRadius: BorderRadius.vertical(
-                    bottom: Radius.circular(30),
+            Stack(
+              children: [
+                Container(
+                  width: 375 * fem,
+                  height: 120 * fem,
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    color: Colors.black,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.zero,
+                      topRight: Radius.zero,
+                      bottomLeft: Radius.circular(30.0),
+                      bottomRight: Radius.circular(30.0),
+                    ),
                   ),
-                ),
-              ),
-            ),
-            Expanded(
-              child: SingleChildScrollView(
-                child: Container(
-                  margin: EdgeInsets.only(left: 20, right: 20),
                   child: Column(
                     children: [
-                      Container(
-                        alignment: Alignment.topLeft,
-                        margin: EdgeInsets.only(top: 25, bottom: 0),
+                      SizedBox(
+                        height: 63,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(18, 0, 18, 0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
+                          //crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(
-                              width: 67 * fem,
-                              child: SizedBox(
-                                width: double.infinity,
-                                child: Container(
-                                  // group34222MH8 (1:241)
-                                  width: double.infinity,
-                                  height: 27 * fem,
-                                  decoration: BoxDecoration(
-                                    borderRadius:
-                                        BorderRadius.circular(10 * fem),
-                                  ),
-                                  child: Container(
-                                    // group34221HwU (1:242)
-                                    width: double.infinity,
-                                    height: double.infinity,
-                                    decoration: BoxDecoration(
-                                      color: const Color(0xfff8f8f8),
-                                      borderRadius:
-                                          BorderRadius.circular(10 * fem),
-                                    ),
-                                    child: Center(
-                                      child: Image.asset(
-                                        'assets/marketplace/images/filtersearchresult2.png',
-                                        fit: BoxFit.contain,
-                                        height: 16,
-                                        width: 43,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            const Expanded(
-                              child: SizedBox(),
-                            ),
+                            // group71484ii (1:222)
                             GestureDetector(
                               onTap: () {
-                                _showModalBottomSheet(context);
+                                Navigator.of(context).pop();
                               },
-                              child: SizedBox(
-                                width: 86 * fem,
-                                child: Container(
-                                  // group342209sC (1:245)
-                                  padding:
-                                      const EdgeInsets.fromLTRB(14, 5, 12, 5),
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    color: const Color(0xfff8f8f8),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      Container(
-                                        // categoryGB8 (1:248)
-                                        margin: const EdgeInsets.fromLTRB(
-                                            0, 0, 6, 0),
-                                        child: Text(
-                                          'Category',
-                                          style: SafeGoogleFont(
-                                            'Kanit',
-                                            fontSize: 11,
-                                            fontWeight: FontWeight.w400,
-                                            height: 1.495,
-                                            letterSpacing: -0.22,
-                                            color: const Color(0xff179b57),
-                                          ),
-                                        ),
-                                      ),
-                                      Container(
-                                        // icarrowright24xZk (1:247)
-                                        margin: const EdgeInsets.fromLTRB(
-                                            0, 1, 0, 0),
-                                        width: 10 * fem,
-                                        height: 10 * fem,
-                                        child: Image.asset(
-                                          'assets/marketplace/images/ic-arrow-right-24.png',
-                                          width: 10 * fem,
-                                          height: 10 * fem,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
+                              child: Image.asset(
+                                'assets/marketplace/images/group-7148.png',
+                                width: 37 * fem,
+                                height: 37 * fem,
                               ),
                             ),
-                            const SizedBox(
-                              width: 10,
-                            ),
                             SizedBox(
-                              width: 116 * fem,
-                              child: Container(
-                                // group34223aWa (1:249)
-                                padding: EdgeInsets.fromLTRB(
-                                    0 * fem, 5 * fem, 0 * fem, 5 * fem),
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xfff8f8f8),
-                                  borderRadius: BorderRadius.circular(10 * fem),
-                                ),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    SizedBox(
-                                      width: 10.48 * fem,
-                                      height: 13 * fem,
-                                      child: Image.asset(
-                                        'assets/marketplace/images/icon.png',
-                                        width: 10.48 * fem,
-                                        height: 13 * fem,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: 3,
-                                    ),
-                                    SizedBox(
-                                      // bangkokQVc (1:258)
-
-                                      child: Text(
-                                        'Bangkok',
-                                        style: SafeGoogleFont(
-                                          'Kanit',
-                                          fontSize: 11 * ffem,
-                                          fontWeight: FontWeight.w400,
-                                          height: 1.495 * ffem / fem,
-                                          letterSpacing: -0.22 * fem,
-                                          color: const Color(0xff737373),
-                                        ),
-                                      ),
-                                    ),
-                                    Text(
-                                      // km798 (1:259)
-                                      ' (30km.)',
-                                      style: SafeGoogleFont(
-                                        'Kanit',
-                                        fontSize: 11 * ffem,
-                                        fontWeight: FontWeight.w400,
-                                        height: 1.495 * ffem / fem,
-                                        letterSpacing: -0.22 * fem,
-                                        color: const Color(0xff3d79d2),
-                                      ),
-                                    ),
-                                  ],
-                                ),
+                              width: 15,
+                            ),
+                            Container(
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                      width: MediaQuery.of(context).size.width *
+                                          0.7 *
+                                          fem,
+                                      height: 43,
+                                      child: TextFormField(
+                                        autofocus: true,
+                                        // controller: pickUpAtController,
+                                        // onFieldSubmitted: (text) {
+                                        //   viewModel.searchAddress(text);
+                                        // },
+                                        keyboardType: TextInputType.text,
+                                        decoration: InputDecoration(
+                                            hintText: 'Search',
+                                            //widget.search
+                                            fillColor: Colors.white,
+                                            filled: true,
+                                            hintStyle: hintTextStyle,
+                                            contentPadding: fieldPadding,
+                                            enabledBorder: searchBoder,
+                                            focusedBorder: searchBoder,
+                                            prefixIcon: Padding(
+                                              padding: EdgeInsets.all(0.0),
+                                              child: Icon(
+                                                Icons.search,
+                                                color: Color(0xFF303030),
+                                              ),
+                                            ),
+                                            suffixIcon: GestureDetector(
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.all(10.0),
+                                                child: Image.asset(
+                                                  'assets/images/close.png',
+                                                  fit: BoxFit.contain,
+                                                  height: 10,
+                                                  width: 10,
+                                                ),
+                                              ),
+                                              onTap: () {
+                                                Navigator.pop(context);
+                                              },
+                                            )),
+                                      ))
+                                ],
                               ),
                             ),
                           ],
                         ),
                       ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Image.asset(
-                        "assets/marketplace/images/Vector-1137.png",
-                      ),
-                      SizedBox(
-                        height: 12,
-                      ),
-                      Row(
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Container(
+              color: Colors.white,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20.0, 16, 20, 0),
+                child: Column(
+                  children: [
+                    Container(
+                      //color: Colors.white,
+                      height: h1,
+                      child:
+                          //Imagecardgen(),
+
+                          Column(
                         children: [
-                          Text(
-                            'Foodie',
-                            style: SafeGoogleFont(
-                              'Kanit',
-                              fontSize: 15 * ffem,
-                              fontWeight: FontWeight.w500,
-                              height: 1.495 * ffem / fem,
-                              letterSpacing: -0.22 * fem,
-                              color: const Color(0xff000000),
+                          Container(
+                            alignment: Alignment.topLeft,
+                            //margin: EdgeInsets.only(top: 25, bottom: 0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  width: 67 * fem,
+                                  child: SizedBox(
+                                    width: double.infinity,
+                                    child: Container(
+                                      // group34222MH8 (1:241)
+                                      width: double.infinity,
+                                      height: 27 * fem,
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(10 * fem),
+                                      ),
+                                      child: Container(
+                                        // group34221HwU (1:242)
+                                        width: double.infinity,
+                                        height: double.infinity,
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xfff8f8f8),
+                                          borderRadius:
+                                              BorderRadius.circular(10 * fem),
+                                        ),
+                                        child: Center(
+                                          child: Image.asset(
+                                            'assets/marketplace/images/filtersearchresult2.png',
+                                            fit: BoxFit.contain,
+                                            height: 16,
+                                            width: 43,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const Expanded(
+                                  child: SizedBox(),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    _showModalBottomSheet(context);
+                                  },
+                                  child: SizedBox(
+                                    width: 86 * fem,
+                                    child: Container(
+                                      // group342209sC (1:245)
+                                      padding: const EdgeInsets.fromLTRB(
+                                          14, 5, 12, 5),
+                                      width: double.infinity,
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xfff8f8f8),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Container(
+                                            // categoryGB8 (1:248)
+                                            margin: const EdgeInsets.fromLTRB(
+                                                0, 0, 6, 0),
+                                            child: Text(
+                                              'Category',
+                                              style: SafeGoogleFont(
+                                                'Kanit',
+                                                fontSize: 11,
+                                                fontWeight: FontWeight.w400,
+                                                height: 1.495,
+                                                letterSpacing: -0.22,
+                                                color: const Color(0xff179b57),
+                                              ),
+                                            ),
+                                          ),
+                                          Container(
+                                            // icarrowright24xZk (1:247)
+                                            margin: const EdgeInsets.fromLTRB(
+                                                0, 1, 0, 0),
+                                            width: 10 * fem,
+                                            height: 10 * fem,
+                                            child: Image.asset(
+                                              'assets/marketplace/images/ic-arrow-right-24.png',
+                                              width: 10 * fem,
+                                              height: 10 * fem,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 10,
+                                ),
+                                SizedBox(
+                                  width: 116 * fem,
+                                  child: Container(
+                                    // group34223aWa (1:249)
+                                    padding: EdgeInsets.fromLTRB(
+                                        0 * fem, 5 * fem, 0 * fem, 5 * fem),
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xfff8f8f8),
+                                      borderRadius:
+                                          BorderRadius.circular(10 * fem),
+                                    ),
+                                    child: Row(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        SizedBox(
+                                          width: 10.48 * fem,
+                                          height: 13 * fem,
+                                          child: Image.asset(
+                                            'assets/marketplace/images/icon.png',
+                                            width: 10.48 * fem,
+                                            height: 13 * fem,
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 3,
+                                        ),
+                                        SizedBox(
+                                          // bangkokQVc (1:258)
+
+                                          child: Text(
+                                            'Bangkok',
+                                            style: SafeGoogleFont(
+                                              'Kanit',
+                                              fontSize: 11 * ffem,
+                                              fontWeight: FontWeight.w400,
+                                              height: 1.495 * ffem / fem,
+                                              letterSpacing: -0.22 * fem,
+                                              color: const Color(0xff737373),
+                                            ),
+                                          ),
+                                        ),
+                                        Text(
+                                          // km798 (1:259)
+                                          ' (30km.)',
+                                          style: SafeGoogleFont(
+                                            'Kanit',
+                                            fontSize: 11 * ffem,
+                                            fontWeight: FontWeight.w400,
+                                            height: 1.495 * ffem / fem,
+                                            letterSpacing: -0.22 * fem,
+                                            color: const Color(0xff3d79d2),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          Image.asset(
+                            "assets/marketplace/images/Vector-1137.png",
+                          ),
+                          SizedBox(
+                            height: 12,
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                'Foodie',
+                                style: SafeGoogleFont(
+                                  'Kanit',
+                                  fontSize: 15 * ffem,
+                                  fontWeight: FontWeight.w500,
+                                  height: 1.495 * ffem / fem,
+                                  letterSpacing: -0.22 * fem,
+                                  color: const Color(0xff000000),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 12,
+                          ),
+                          SizedBox(
+                            height: h1,
+                            child: Imagecardgen(),
+                          ),
+                          Center(
+                            child: SizedBox(
+                              height: 50.0,
+                              child: Image.asset(
+                                "assets/marketplace/images/59bf3901102a67d318412a84662ce5d2ad770a3a.gif",
+                                fit: BoxFit.cover,
+                                width: 50.0,
+                                height: 50.0,
+                              ),
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 12,
-                      ),
-                      SizedBox(
-                        height: h1,
-                        child: Imagecardgen(),
-                      ),
-                      Center(
-                        child: SizedBox(
-                          height: 50.0,
-                          child: Image.asset(
-                            "assets/marketplace/images/59bf3901102a67d318412a84662ce5d2ad770a3a.gif",
-                            fit: BoxFit.cover,
-                            width: 50.0,
-                            height: 50.0,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -341,13 +378,16 @@ void _showModalBottomSheet(BuildContext context) {
         expand: false,
         builder: (context, scrollController) {
           var searchlist = categorylist;
+          double baseWidth = 375;
+          double fem = MediaQuery.of(context).size.width / baseWidth;
+          double ffem = fem * 0.97;
           return SingleChildScrollView(
             controller: scrollController,
             child: Stack(
               alignment: AlignmentDirectional.topCenter,
               clipBehavior: Clip.none,
               children: [
-                Headernoiconforcategory(fem: 1, ffem: 1, title: "Category"),
+                Headernoiconforcategory(fem: fem, ffem: fem, title: "Category"),
                 Positioned(
                   top: 10,
                   child: Container(
@@ -362,7 +402,7 @@ void _showModalBottomSheet(BuildContext context) {
                 ),
                 Column(children: [
                   SizedBox(
-                    height: 108,
+                    height: 115 * fem,
                   ),
                   ListView.builder(
                       scrollDirection: Axis.vertical,

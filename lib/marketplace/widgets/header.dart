@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:we_link/marketplace/fonts/utils.dart';
+import 'package:we_link/marketplace/pages/categorydetail.dart';
 import 'package:we_link/marketplace/pages/favorite.dart';
 import 'package:we_link/marketplace/pages/marketplace.dart';
+import 'package:we_link/marketplace/pages/searchmarkets.dart';
 import 'package:we_link/views/home_screen.dart';
 
 import '../../components/home/homeComponents/home_menu_section.dart';
-import '../pages/searchmarket.dart';
 
 //header for markethome (2 back icon)
 class Header extends StatelessWidget {
@@ -121,26 +122,27 @@ class Header extends StatelessWidget {
                     ),
                   ],
                 ),
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => MarketHomeSearchScreen()),
-                    );
-                  },
-                  child: Container(
-                    // taxirowS1C (1:214)
-                    width: double.infinity,
-                    height: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(14 * fem),
-                    ),
-                    child: Center(
-                      // rectangle8at6 (1:215)
-                      child: SizedBox(
-                        width: double.infinity,
-                        height: 40 * fem,
+
+                child: Container(
+                  // taxirowS1C (1:214)
+                  width: double.infinity,
+                  height: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(14 * fem),
+                  ),
+                  child: Center(
+                    // rectangle8at6 (1:215)
+                    child: SizedBox(
+                      width: double.infinity,
+                      height: 40 * fem,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SearchMScreen()),
+                          );
+                        },
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(14 * fem),
@@ -200,7 +202,7 @@ class Header extends StatelessWidget {
               ),
             ),
           ),
-        )
+        ),
       ],
     );
   }

@@ -192,13 +192,16 @@ void _showModalBottomSheet(BuildContext context) {
         expand: false,
         builder: (context, scrollController) {
           var searchlist = categorylist;
+          double baseWidth = 375;
+          double fem = MediaQuery.of(context).size.width / baseWidth;
+          double ffem = fem * 0.97;
           return SingleChildScrollView(
             controller: scrollController,
             child: Stack(
               alignment: AlignmentDirectional.topCenter,
               clipBehavior: Clip.none,
               children: [
-                Headernoiconforcategory(fem: 1, ffem: 1, title: "Category"),
+                Headernoiconforcategory(fem: fem, ffem: fem, title: "Category"),
                 Positioned(
                   top: 10,
                   child: Container(
@@ -213,7 +216,7 @@ void _showModalBottomSheet(BuildContext context) {
                 ),
                 Column(children: [
                   SizedBox(
-                    height: 108,
+                    height: 115 * fem,
                   ),
                   ListView.builder(
                       scrollDirection: Axis.vertical,

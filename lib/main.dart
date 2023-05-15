@@ -11,12 +11,13 @@ import 'package:we_link/routes/app_route.dart';
 import 'package:we_link/views/auth/splash_screen.dart';
 import 'firebase_options.dart';
 
+import 'package:we_link/marketplace/pages/marketplace.dart';
+
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp();
 
   if (message.data != null) {}
 }
-
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,7 +32,8 @@ void main() async {
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
 
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,);
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   await GetStorage.init();
   await dotenv.load(fileName: 'assets/.env.dart');
   await AppModule().provideModule();
@@ -51,7 +53,8 @@ class MyApp extends StatelessWidget {
         home: MaterialApp(
           title: 'we link',
           debugShowCheckedModeBanner: false,
-          home: SplashScreen(),
+          //home: SplashScreen(),
+          home: MarketHomeScreen(),
         ),
       ),
     );

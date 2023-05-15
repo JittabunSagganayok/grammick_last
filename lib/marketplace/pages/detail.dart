@@ -187,7 +187,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       imagetitle,
                       style: SafeGoogleFont(
                         'Kanit',
-                        fontSize: 13 * ffem,
+                        fontSize: 18 * ffem,
                         fontWeight: FontWeight.w400,
                         height: 1.495,
                         color: const Color(0xff000000),
@@ -201,7 +201,7 @@ class _DetailScreenState extends State<DetailScreen> {
                       imageprice,
                       style: SafeGoogleFont(
                         'Kanit',
-                        fontSize: 13 * ffem,
+                        fontSize: 14 * ffem,
                         fontWeight: FontWeight.w600,
                         height: 1.495,
                         color: const Color(0xfff9774e),
