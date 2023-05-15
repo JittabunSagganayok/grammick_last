@@ -8,8 +8,8 @@ import 'package:we_link/marketplace/pages/favorite.dart';
 import 'package:we_link/marketplace/pages/marketplace.dart';
 import 'package:we_link/marketplace/widgets/header.dart';
 
-import '../data/data.dart';
-import '../widgets/imagecard.dart';
+import 'package:we_link/marketplace/data/data.dart';
+import 'package:we_link/marketplace/widgets/imagecard.dart';
 
 class SearchResultScreen extends StatefulWidget {
   SearchResultScreen({super.key, required this.search});

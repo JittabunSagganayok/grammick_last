@@ -137,3 +137,5 @@ class _MarketHomeScreenState extends State<MarketHomeScreen> {
 
 /***************************************************************************************************************************/
 
+//เมื่อกด controller == true
+//ทำ widget เป็น function if(controller==true) {return widget1 } else return widget2 อย่าลืม setstate

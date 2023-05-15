@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:we_link/marketplace/fonts/utils.dart';
+import 'package:we_link/marketplace/pages/mapsearch.dart';
 
 import '../data/data.dart';
 import '../pages/favorite.dart';
@@ -111,64 +112,72 @@ class Foryou extends StatelessWidget {
         const SizedBox(
           width: 10,
         ),
-        SizedBox(
-          width: 116 * fem,
-          child: Container(
-            // group34223aWa (1:249)
-            padding: EdgeInsets.fromLTRB(0 * fem, 5 * fem, 0 * fem, 5 * fem),
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: const Color(0xfff8f8f8),
-              borderRadius: BorderRadius.circular(10 * fem),
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const SizedBox(
-                  width: 10,
-                ),
-                SizedBox(
-                  // iconVNe (1:251)
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MapSearchMScreen()),
+            );
+          },
+          child: SizedBox(
+            width: 116 * fem,
+            child: Container(
+              // group34223aWa (1:249)
+              padding: EdgeInsets.fromLTRB(0 * fem, 5 * fem, 0 * fem, 5 * fem),
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: const Color(0xfff8f8f8),
+                borderRadius: BorderRadius.circular(10 * fem),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  SizedBox(
+                    // iconVNe (1:251)
 
-                  width: 10.48 * fem,
-                  height: 13 * fem,
-                  child: Image.asset(
-                    'assets/marketplace/images/icon.png',
                     width: 10.48 * fem,
                     height: 13 * fem,
+                    child: Image.asset(
+                      'assets/marketplace/images/icon.png',
+                      width: 10.48 * fem,
+                      height: 13 * fem,
+                    ),
                   ),
-                ),
-                SizedBox(
-                  width: 3,
-                ),
-                SizedBox(
-                  // bangkokQVc (1:258)
+                  SizedBox(
+                    width: 3,
+                  ),
+                  SizedBox(
+                    // bangkokQVc (1:258)
 
-                  child: Text(
-                    'Bangkok',
+                    child: Text(
+                      'Bangkok',
+                      style: SafeGoogleFont(
+                        'Kanit',
+                        fontSize: 11 * ffem,
+                        fontWeight: FontWeight.w400,
+                        height: 1.495 * ffem / fem,
+                        letterSpacing: -0.22 * fem,
+                        color: const Color(0xff737373),
+                      ),
+                    ),
+                  ),
+                  Text(
+                    // km798 (1:259)
+                    ' (30km.)',
                     style: SafeGoogleFont(
                       'Kanit',
                       fontSize: 11 * ffem,
                       fontWeight: FontWeight.w400,
                       height: 1.495 * ffem / fem,
                       letterSpacing: -0.22 * fem,
-                      color: const Color(0xff737373),
+                      color: const Color(0xff3d79d2),
                     ),
                   ),
-                ),
-                Text(
-                  // km798 (1:259)
-                  ' (30km.)',
-                  style: SafeGoogleFont(
-                    'Kanit',
-                    fontSize: 11 * ffem,
-                    fontWeight: FontWeight.w400,
-                    height: 1.495 * ffem / fem,
-                    letterSpacing: -0.22 * fem,
-                    color: const Color(0xff3d79d2),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
