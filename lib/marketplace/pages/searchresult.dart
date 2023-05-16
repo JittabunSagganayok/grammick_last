@@ -5,6 +5,7 @@ import 'package:we_link/constant/colosrConstants.dart';
 import 'package:we_link/constant/stylesConstants.dart';
 import 'package:we_link/marketplace/fonts/utils.dart';
 import 'package:we_link/marketplace/pages/favorite.dart';
+import 'package:we_link/marketplace/pages/filtermarket.dart';
 import 'package:we_link/marketplace/pages/marketplace.dart';
 import 'package:we_link/marketplace/widgets/header.dart';
 
@@ -149,32 +150,42 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          SizedBox(
-                            width: 67 * fem,
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => FiltermarketScreen()),
+                              );
+                            },
                             child: SizedBox(
-                              width: double.infinity,
-                              child: Container(
-                                // group34222MH8 (1:241)
+                              width: 67 * fem,
+                              child: SizedBox(
                                 width: double.infinity,
-                                height: 27 * fem,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10 * fem),
-                                ),
                                 child: Container(
-                                  // group34221HwU (1:242)
+                                  // group34222MH8 (1:241)
                                   width: double.infinity,
-                                  height: double.infinity,
+                                  height: 27 * fem,
                                   decoration: BoxDecoration(
-                                    color: const Color(0xff189B58),
                                     borderRadius:
                                         BorderRadius.circular(10 * fem),
                                   ),
-                                  child: Center(
-                                    child: Image.asset(
-                                      'assets/marketplace/images/filtersearchresult.png',
-                                      fit: BoxFit.contain,
-                                      height: 16,
-                                      width: 43,
+                                  child: Container(
+                                    // group34221HwU (1:242)
+                                    width: double.infinity,
+                                    height: double.infinity,
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xff189B58),
+                                      borderRadius:
+                                          BorderRadius.circular(10 * fem),
+                                    ),
+                                    child: Center(
+                                      child: Image.asset(
+                                        'assets/marketplace/images/filtersearchresult.png',
+                                        fit: BoxFit.contain,
+                                        height: 16,
+                                        width: 43,
+                                      ),
                                     ),
                                   ),
                                 ),

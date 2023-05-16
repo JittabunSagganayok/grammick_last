@@ -152,7 +152,7 @@ class _MapSearchMScreenState extends State<MapSearchMScreen> {
                 Column(
                   children: [
                     SizedBox(
-                      height: 585,
+                      height: 575,
                     ),
                     Container(
                       color: Colors.white,
