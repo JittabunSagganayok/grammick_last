@@ -37,7 +37,7 @@ class _FiltermarketScreenState extends State<FiltermarketScreen> {
             Stack(
               children: [
                 Container(
-                  height: 812 * fem,
+                  height: 772 * fem,
                   width: 375 * fem,
                   padding: EdgeInsets.fromLTRB(0, 125, 0, 0),
                   color: Colors.white,
@@ -223,12 +223,12 @@ class _FiltermarketScreenState extends State<FiltermarketScreen> {
                 Column(
                   children: [
                     SizedBox(
-                      height: 685 * fem,
+                      height: 665 * fem,
                     ),
                     Container(
                       //color: Colors.white,
                       width: 375 * fem,
-                      height: 125 * fem,
+                      height: 105 * fem,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         // borderRadius: BorderRadius.only(

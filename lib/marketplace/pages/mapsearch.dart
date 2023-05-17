@@ -152,12 +152,12 @@ class _MapSearchMScreenState extends State<MapSearchMScreen> {
                 Column(
                   children: [
                     SizedBox(
-                      height: 575,
+                      height: 555 * fem,
                     ),
                     Container(
                       color: Colors.white,
                       width: 375 * fem,
-                      height: 276 * fem,
+                      height: 220 * fem,
                       child: Padding(
                         padding: const EdgeInsets.all(20.0),
                         child: Column(

@@ -3,6 +3,7 @@ import 'package:we_link/marketplace/fonts/utils.dart';
 import 'package:we_link/marketplace/pages/categorydetail.dart';
 import 'package:we_link/marketplace/pages/favorite.dart';
 import 'package:we_link/marketplace/pages/marketplace.dart';
+import 'package:we_link/marketplace/pages/profilemarket.dart';
 import 'package:we_link/marketplace/pages/searchmarkets.dart';
 import 'package:we_link/views/home_screen.dart';
 
@@ -71,7 +72,13 @@ class Header extends StatelessWidget {
                   width: 65,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ProfilemarketScreen()),
+                    );
+                  },
                   child: Image.asset(
                     'assets/marketplace/images/group-34224.png',
                     width: 37 * fem,
