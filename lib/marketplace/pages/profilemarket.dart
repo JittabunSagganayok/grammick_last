@@ -182,12 +182,12 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                               ),
                             ),
                             SizedBox(
-                              width: 107,
+                              width: 70 * fem,
                             ),
                             Row(
                               children: [
                                 Text(
-                                  "Filter",
+                                  "Profile Store",
                                   style: SafeGoogleFont(
                                     'Kanit',
                                     fontSize: 22 * ffem,
@@ -197,7 +197,7 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 107,
+                                  width: 70 * fem,
                                 ),
                                 GestureDetector(
                                   onTap: () {
