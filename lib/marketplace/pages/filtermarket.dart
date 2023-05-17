@@ -90,6 +90,8 @@ class _FiltermarketScreenState extends State<FiltermarketScreen> {
                                 decoration: BoxDecoration(
                                   color: const Color(0xfff1f1f1),
                                   borderRadius: BorderRadius.circular(5),
+                                  // border:
+                                  //     Border.all(color: Colors.blueAccent)]
                                 ),
                                 child: TextField(
                                   decoration: InputDecoration(
@@ -223,12 +225,12 @@ class _FiltermarketScreenState extends State<FiltermarketScreen> {
                 Column(
                   children: [
                     SizedBox(
-                      height: 665 * fem,
+                      height: 685 * fem,
                     ),
                     Container(
                       //color: Colors.white,
                       width: 375 * fem,
-                      height: 105 * fem,
+                      height: 120 * fem,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         // borderRadius: BorderRadius.only(

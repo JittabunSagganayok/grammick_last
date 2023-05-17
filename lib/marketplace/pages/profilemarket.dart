@@ -26,6 +26,7 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     double fontfem = fem * 0.85;
+    final imageData = profileList;
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -34,118 +35,6 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
           children: [
             Stack(
               children: [
-                // Container(
-                //   height: 772 * fem,
-                //   width: 375 * fem,
-                //   padding: EdgeInsets.fromLTRB(0, 125, 0, 0),
-                //   color: Colors.white,
-                //   child: Container(
-                //     width: double.infinity,
-                //     height: double.infinity,
-                //     child: Column(
-                //       children: [
-                //         Padding(
-                //           padding: const EdgeInsets.all(23.0),
-                //           child: Fivemenu(),
-                //         ),
-                //         SizedBox(
-                //           height: 7,
-                //         ),
-                //         Image.asset(
-                //           'assets/marketplace/images/Vector 38.png',
-                //           fit: BoxFit.contain,
-                //           //height: 10,
-                //           width: 375 * fem,
-                //         ),
-                //         Row(
-                //           children: [
-                //             Padding(
-                //               padding:
-                //                   const EdgeInsets.fromLTRB(23, 16, 23, 16),
-                //               child: Text(
-                //                 'Prices',
-                //                 style: SafeGoogleFont(
-                //                   'Kanit',
-                //                   fontSize: 15 * ffem,
-                //                   fontWeight: FontWeight.w500,
-                //                   height: 1.495 * ffem / fem,
-                //                   letterSpacing: -0.22 * fem,
-                //                   color: const Color(0xff000000),
-                //                 ),
-                //               ),
-                //             ),
-                //           ],
-                //         ),
-                //         Padding(
-                //           padding: const EdgeInsets.fromLTRB(23, 0, 23, 23),
-                //           child: Row(
-                //             mainAxisAlignment: MainAxisAlignment.start,
-                //             crossAxisAlignment: CrossAxisAlignment.center,
-                //             children: [
-                //               Container(
-                //                 width: 140,
-                //                 height: 35,
-                //                 decoration: BoxDecoration(
-                //                   color: const Color(0xfff1f1f1),
-                //                   borderRadius: BorderRadius.circular(5),
-                //                 ),
-                //                 child: TextField(
-                //                   decoration: InputDecoration(
-                //                       hintStyle: TextStyle(fontSize: 11),
-                //                       hintText: 'Lower price',
-                //                       border: InputBorder.none,
-                //                       contentPadding:
-                //                           EdgeInsets.fromLTRB(40, 15, 0, 15)),
-                //                 ),
-                //               ),
-                //               Expanded(
-                //                 child: SizedBox(),
-                //               ),
-                //               Text(
-                //                 "to",
-                //                 style: SafeGoogleFont(
-                //                   'Kanit',
-                //                   fontSize: 13,
-                //                   fontWeight: FontWeight.w500,
-                //                   height: 1.495 * ffem / fem,
-                //                   letterSpacing: -0.22 * fem,
-                //                   color: const Color(0xff767676),
-                //                 ),
-                //               ),
-                //               Expanded(child: SizedBox()),
-                //               Container(
-                //                 width: 140,
-                //                 height: 35,
-                //                 decoration: BoxDecoration(
-                //                   color: const Color(0xfff1f1f1),
-                //                   borderRadius: BorderRadius.circular(5),
-                //                 ),
-                //                 child: TextField(
-                //                   decoration: InputDecoration(
-                //                       hintStyle: TextStyle(fontSize: 11),
-                //                       hintText: 'Hightest price',
-                //                       border: InputBorder.none,
-                //                       contentPadding:
-                //                           EdgeInsets.fromLTRB(35, 15, 0, 15)),
-                //                 ),
-                //               ),
-                //             ],
-                //           ),
-                //         ),
-                //         Image.asset(
-                //           'assets/marketplace/images/Vector 38.png',
-                //           fit: BoxFit.contain,
-                //           //height: 10,
-                //           width: 375 * fem,
-                //         ),
-                //         Expanded(
-                //             child: Container(
-                //           color: Colors.white,
-                //         )),
-                //       ],
-                //     ),
-                //   ),
-                // ),
                 Container(
                   width: 375 * fem,
                   height: 120 * fem,
@@ -229,35 +118,107 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20.0, 16, 20, 0),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      //margin: EdgeInsets.only(left: 20, right: 20),
-                      child: Column(
+                      child: Row(
                         children: [
-                          Container(
-                            //alignment: Alignment.topLeft,
-                            //margin: EdgeInsets.only(top: 0, bottom: 0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  "My Sale",
-                                  style: TextStyle(
-                                      color: Color(0xFF000000),
-                                      fontSize: 12 * fem,
-                                      fontWeight: FontWeight.w400,
-                                      fontFamily: 'Kanit'),
-                                ),
-                                Text(
-                                  "Clear All",
-                                  style: TextStyle(
-                                      color: Color(0xFF172BB5),
-                                      fontSize: 12 * fem,
-                                      fontWeight: FontWeight.w400,
-                                      fontFamily: 'Kanit'),
-                                ),
-                              ],
-                            ),
+                          Image.asset(
+                            'assets/marketplace/images/Ellipse643.png',
+                            width: 46 * fem,
+                            height: 46 * fem,
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Surakit Montakirue",
+                                style: TextStyle(
+                                    color: Color(0xFF000000),
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w800,
+                                    fontFamily: 'Kanit'),
+                              ),
+                              Text(
+                                "(My Store)",
+                                style: TextStyle(
+                                    color: Color(0xFF4d4d4d),
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w300,
+                                    fontFamily: 'Kanit'),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 18,
+                    ),
+                    Image.asset(
+                      "assets/marketplace/images/Vector-1137.png",
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Container(
+                      width: double.infinity,
+                      height: 42 * fem,
+                      decoration: BoxDecoration(
+                        color: Color(0xffCEFFCD),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'assets/marketplace/images/Group 34217.png',
+                            width: 16 * fem,
+                            height: 18 * fem,
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text(
+                            "Create Product",
+                            style: TextStyle(
+                                color: Color(0xFF189b58),
+                                fontSize: 13 * fem,
+                                fontWeight: FontWeight.w500,
+                                fontFamily: 'Kanit'),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            "My Sale",
+                            style: TextStyle(
+                                color: Color(0xFF000000),
+                                fontSize: 12 * fem,
+                                fontWeight: FontWeight.w800,
+                                fontFamily: 'Kanit'),
+                          ),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Image.asset(
+                            'assets/marketplace/images/Group 33869.png',
+                            width: 11 * fem,
+                            height: 11 * fem,
                           ),
                         ],
                       ),
@@ -266,81 +227,89 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                         padding: EdgeInsets.zero,
                         scrollDirection: Axis.vertical,
                         shrinkWrap: true,
-                        itemCount: searchlist.length,
+                        itemCount: imageData.length,
                         itemBuilder: ((context, index) => Container(
                               width: double.infinity,
                               // height: 500,
-                              child: Dismissible(
-                                key: ValueKey(searchlist[index]),
-                                background: Container(
-                                  alignment: Alignment.centerRight,
-                                  child: Image.asset(
-                                    'assets/marketplace/images/delete.png',
-                                    fit: BoxFit.contain,
-                                    height: 36,
-                                    width: 61,
-                                  ),
-                                ),
-                                child: Container(
-                                  // height: 100,
-                                  child: Padding(
-                                    padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
-                                    child: GestureDetector(
-                                      onTap: () {
-                                        // Navigator.push(
-                                        //   context,
-                                        //   MaterialPageRoute(
-                                        //       builder: (context) =>
-                                        //           SearchResultScreen(
-                                        //               search: searchlist[index]
-                                        //                   ["title"])),
-                                        // );
-                                      },
-                                      child: Row(
+                              child: Container(
+                                // height: 100,
+                                child: Padding(
+                                  padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
+                                  child: Row(
+                                    children: [
+                                      if (imageData[index]['status'] ==
+                                          "Normal")
+                                        ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          child:
+                                              //if(imageData[index]['image_path']=="normal")
+                                              Image.asset(
+                                            imageData[index]['image_path'],
+                                            fit: BoxFit.cover,
+                                            height: 81,
+                                            width: 91,
+                                          ),
+                                          //else
+                                        )
+                                      else
+                                        ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          child:
+                                              //if(imageData[index]['image_path']=="normal")
+                                              Image.asset(
+                                            imageData[index]['image_path'],
+                                            fit: BoxFit.cover,
+                                            height: 81,
+                                            width: 91,
+                                            color: Colors.black45,
+                                            colorBlendMode: BlendMode.darken,
+                                          ),
+                                          //else
+                                        ),
+                                      SizedBox(
+                                        width: 15,
+                                      ),
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
-                                          Image.asset(
-                                            'assets/marketplace/images/iconsearch.png',
-                                            fit: BoxFit.contain,
-                                            height: 18,
-                                            width: 18,
+                                          Container(
+                                            width: 145 * fem,
+                                            child: Text(
+                                              imageData[index]["title"],
+                                              style: TextStyle(
+                                                  color: Color(0xFF212B32),
+                                                  fontSize: 13 * ffem,
+                                                  fontWeight: FontWeight.w600,
+                                                  fontFamily: 'Kanit'),
+                                              overflow: TextOverflow.ellipsis,
+                                            ),
+                                          ),
+                                          Text(
+                                            imageData[index]["price"],
+                                            style: TextStyle(
+                                                color: Color(0xFF979797),
+                                                fontSize: 13 * ffem,
+                                                fontWeight: FontWeight.w400,
+                                                fontFamily: 'Kanit'),
                                           ),
                                           SizedBox(
-                                            width: 20,
-                                          ),
-                                          Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              Text(
-                                                searchlist[index]["title"],
-                                                style: TextStyle(
-                                                    color: Color(0xFF212B32),
-                                                    fontSize: 14 * ffem,
-                                                    fontWeight: FontWeight.w700,
-                                                    fontFamily: 'Kanit'),
-                                              ),
-                                              Text(
-                                                searchlist[index]["subtitle"],
-                                                style: TextStyle(
-                                                    color: Color(0xFF979797),
-                                                    fontSize: 13 * ffem,
-                                                    fontWeight: FontWeight.w400,
-                                                    fontFamily: 'Kanit'),
-                                              ),
-                                            ],
-                                          ),
-                                          Expanded(child: SizedBox()),
-                                          Image.asset(
-                                            'assets/marketplace/images/arrowsearch.png',
-                                            fit: BoxFit.contain,
-                                            height: 18,
-                                            width: 18,
+                                            height: 50,
                                           ),
                                         ],
                                       ),
-                                    ),
+                                      Expanded(child: SizedBox()),
+                                      Image.asset(
+                                        'assets/marketplace/images/Group 34208.png',
+                                        fit: BoxFit.contain,
+                                        height: 28,
+                                        width: 28,
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
@@ -432,7 +401,7 @@ class RedeemConfirmationScreen extends StatelessWidget {
                                   // },
                                   keyboardType: TextInputType.text,
                                   decoration: InputDecoration(
-                                      hintText: 'Search',
+                                      hintText: 'Search you product',
                                       //widget.search
                                       fillColor: Colors.white,
                                       filled: true,

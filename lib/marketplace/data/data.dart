@@ -114,6 +114,64 @@ List<Map<String, dynamic>> imagescardList = [
         "Hali Parker is a contemporary clothing brand, devoted to creating garments that are perfect for everyday wear. Each and every garment is designed to be long- lasting, functional and timeless, with a promise to ... More"
   },
 ];
+List<Map<String, dynamic>> profileList = [
+  {
+    "status": "Normal",
+    "id": "1",
+    "image_path": 'assets/marketplace/images/rectangle-4604.png',
+    "title": "Awesome Custom RED Kit Flag",
+    "price": "68,000 ฿",
+    "sellername": "Hali Parker",
+    "sellerphone": "089-912-2933",
+    "sellerlocation":
+        "The Mall Bangkapi There are many variations of passages of Lorem Ipsum available, but the ",
+    "sellerprovince": "(Bangkok 30km)",
+    "sellerdetail":
+        "Hali Parker is a contemporary clothing brand, devoted to creating garments that are perfect for everyday wear. Each and every garment is designed to be long- lasting, functional and timeless, with a promise to ... More"
+  },
+  {
+    "status": "Sold",
+    "id": "2",
+    "image_path": 'assets/marketplace/images/rectangle-4605.png',
+    "title": "Wintage Couple Gucci",
+    "price": "68,000 ฿",
+    "sellername": "Hali Parker",
+    "sellerphone": "089-912-2933",
+    "sellerlocation":
+        "The Mall Bangkapi There are many variations of passages of Lorem Ipsum available, but the ",
+    "sellerprovince": "(Bangkok 30km)",
+    "sellerdetail":
+        "Hali Parker is a contemporary clothing brand, devoted to creating garments that are perfect for everyday wear. Each and every garment is designed to be long- lasting, functional and timeless, with a promise to ... More"
+  },
+  {
+    "status": "Reported",
+    "id": "3",
+    "image_path": 'assets/marketplace/images/rectangle-4606.png',
+    "title": "Skin Care iSuuse zu",
+    "price": "9,000 ฿",
+    "sellername": "Hali Parker",
+    "sellerphone": "089-912-2933",
+    "sellerlocation":
+        "The Mall Bangkapi There are many variations of passages of Lorem Ipsum available, but the ",
+    "sellerprovince": "(Bangkok 30km)",
+    "sellerdetail":
+        "Hali Parker is a contemporary clothing brand, devoted to creating garments that are perfect for everyday wear. Each and every garment is designed to be long- lasting, functional and timeless, with a promise to ... More"
+  },
+  {
+    "status": "Pending",
+    "id": "4",
+    "image_path": 'assets/marketplace/images/rectangle-4606.png',
+    "title": "Skin Care iSuuse zu",
+    "price": "9,000 ฿",
+    "sellername": "Hali Parker",
+    "sellerphone": "089-912-2933",
+    "sellerlocation":
+        "The Mall Bangkapi There are many variations of passages of Lorem Ipsum available, but the ",
+    "sellerprovince": "(Bangkok 30km)",
+    "sellerdetail":
+        "Hali Parker is a contemporary clothing brand, devoted to creating garments that are perfect for everyday wear. Each and every garment is designed to be long- lasting, functional and timeless, with a promise to ... More"
+  },
+];
 
 List<Map<String, dynamic>> vdo = [
   {

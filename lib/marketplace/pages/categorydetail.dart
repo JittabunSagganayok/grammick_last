@@ -141,10 +141,7 @@ class _CategoryDetailScreenState extends State<CategoryDetailScreen> {
                     Container(
                       //color: Colors.white,
                       height: h1,
-                      child:
-                          //Imagecardgen(),
-
-                          Column(
+                      child: Column(
                         children: [
                           Container(
                             alignment: Alignment.topLeft,
