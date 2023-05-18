@@ -51,7 +51,7 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                   child: Column(
                     children: [
                       SizedBox(
-                        height: 63,
+                        height: 63 * fem,
                       ),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(18, 0, 18, 0),
@@ -130,7 +130,7 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                             height: 46 * fem,
                           ),
                           SizedBox(
-                            width: 15,
+                            width: 15 * fem,
                           ),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -139,7 +139,7 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                                 "Surakit Montakirue",
                                 style: TextStyle(
                                     color: Color(0xFF000000),
-                                    fontSize: 18,
+                                    fontSize: 18 * ffem,
                                     fontWeight: FontWeight.w800,
                                     fontFamily: 'Kanit'),
                               ),
@@ -147,7 +147,7 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                                 "(My Store)",
                                 style: TextStyle(
                                     color: Color(0xFF4d4d4d),
-                                    fontSize: 11,
+                                    fontSize: 11 * ffem,
                                     fontWeight: FontWeight.w300,
                                     fontFamily: 'Kanit'),
                               ),
@@ -157,13 +157,13 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                       ),
                     ),
                     SizedBox(
-                      height: 18,
+                      height: 18 * fem,
                     ),
                     Image.asset(
                       "assets/marketplace/images/Vector-1137.png",
                     ),
                     SizedBox(
-                      height: 15,
+                      height: 15 * fem,
                     ),
                     Container(
                       width: double.infinity,
@@ -184,13 +184,13 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                             height: 18 * fem,
                           ),
                           SizedBox(
-                            width: 5,
+                            width: 5 * fem,
                           ),
                           Text(
                             "Create Product",
                             style: TextStyle(
                                 color: Color(0xFF189b58),
-                                fontSize: 13 * fem,
+                                fontSize: 13 * ffem,
                                 fontWeight: FontWeight.w500,
                                 fontFamily: 'Kanit'),
                           ),
@@ -198,7 +198,7 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                       ),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 20 * fem,
                     ),
                     Container(
                       child: Row(
@@ -208,12 +208,12 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                             "My Sale",
                             style: TextStyle(
                                 color: Color(0xFF000000),
-                                fontSize: 12 * fem,
+                                fontSize: 12 * ffem,
                                 fontWeight: FontWeight.w800,
                                 fontFamily: 'Kanit'),
                           ),
                           SizedBox(
-                            width: 5,
+                            width: 5 * fem,
                           ),
                           Image.asset(
                             'assets/marketplace/images/Group 33869.png',
@@ -234,81 +234,410 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                               child: Container(
                                 // height: 100,
                                 child: Padding(
-                                  padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
-                                  child: Row(
+                                  padding: EdgeInsets.fromLTRB(0, 18, 0, 0),
+                                  child: Stack(
                                     children: [
-                                      if (imageData[index]['status'] ==
-                                          "Normal")
-                                        ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          child:
-                                              //if(imageData[index]['image_path']=="normal")
-                                              Image.asset(
-                                            imageData[index]['image_path'],
-                                            fit: BoxFit.cover,
-                                            height: 81,
-                                            width: 91,
-                                          ),
-                                          //else
-                                        )
-                                      else
-                                        ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          child:
-                                              //if(imageData[index]['image_path']=="normal")
-                                              Image.asset(
-                                            imageData[index]['image_path'],
-                                            fit: BoxFit.cover,
-                                            height: 81,
-                                            width: 91,
-                                            color: Colors.black45,
-                                            colorBlendMode: BlendMode.darken,
-                                          ),
-                                          //else
-                                        ),
-                                      SizedBox(
-                                        width: 15,
-                                      ),
                                       Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
                                         children: [
-                                          Container(
-                                            width: 145 * fem,
-                                            child: Text(
-                                              imageData[index]["title"],
-                                              style: TextStyle(
-                                                  color: Color(0xFF212B32),
-                                                  fontSize: 13 * ffem,
-                                                  fontWeight: FontWeight.w600,
-                                                  fontFamily: 'Kanit'),
-                                              overflow: TextOverflow.ellipsis,
-                                            ),
-                                          ),
-                                          Text(
-                                            imageData[index]["price"],
-                                            style: TextStyle(
-                                                color: Color(0xFF979797),
-                                                fontSize: 13 * ffem,
-                                                fontWeight: FontWeight.w400,
-                                                fontFamily: 'Kanit'),
+                                          Row(
+                                            children: [
+                                              if (imageData[index]['status'] ==
+                                                  "Normal")
+                                                ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  child:
+                                                      //if(imageData[index]['image_path']=="normal")
+                                                      Image.asset(
+                                                    imageData[index]
+                                                        ['image_path'],
+                                                    fit: BoxFit.cover,
+                                                    height: 81 * fem,
+                                                    width: 91 * fem,
+                                                  ),
+                                                  //else
+                                                )
+                                              else if (imageData[index]
+                                                      ['status'] ==
+                                                  "Sold")
+                                                ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  child:
+                                                      //if(imageData[index]['image_path']=="normal")
+                                                      Stack(
+                                                    children: [
+                                                      Image.asset(
+                                                        imageData[index]
+                                                            ['image_path'],
+                                                        fit: BoxFit.cover,
+                                                        height: 81 * fem,
+                                                        width: 91 * fem,
+                                                        color: Colors.black45,
+                                                        colorBlendMode:
+                                                            BlendMode.darken,
+                                                      ),
+                                                      Container(
+                                                        padding: EdgeInsets.all(
+                                                            30 * fem),
+                                                        child: Text(
+                                                          imageData[index]
+                                                              ["status"],
+                                                          style: TextStyle(
+                                                              color: Color(
+                                                                  0xFFffffff),
+                                                              fontSize:
+                                                                  13 * ffem,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700,
+                                                              fontFamily:
+                                                                  'Kanit'),
+                                                          overflow: TextOverflow
+                                                              .ellipsis,
+                                                        ),
+                                                      )
+                                                    ],
+                                                  ),
+                                                  //else
+                                                )
+                                              else if (imageData[index]
+                                                      ['status'] ==
+                                                  "Reported")
+                                                ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  child:
+                                                      //if(imageData[index]['image_path']=="normal")
+                                                      Stack(
+                                                    children: [
+                                                      Image.asset(
+                                                        imageData[index]
+                                                            ['image_path'],
+                                                        fit: BoxFit.cover,
+                                                        height: 81 * fem,
+                                                        width: 91 * fem,
+                                                        color: Colors.red[400],
+                                                        colorBlendMode:
+                                                            BlendMode.darken,
+                                                      ),
+                                                      Container(
+                                                        padding: EdgeInsets.all(
+                                                            15 * fem),
+                                                        child: Column(
+                                                          children: [
+                                                            SizedBox(
+                                                              height: 20 * fem,
+                                                            ),
+                                                            Text(
+                                                              imageData[index]
+                                                                  ["status"],
+                                                              style: TextStyle(
+                                                                  color: Color(
+                                                                      0xFFffffff),
+                                                                  fontSize:
+                                                                      13 * ffem,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w700,
+                                                                  fontFamily:
+                                                                      'Kanit'),
+                                                              overflow:
+                                                                  TextOverflow
+                                                                      .ellipsis,
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      )
+                                                    ],
+                                                  ),
+                                                  //else
+                                                )
+                                              else if (imageData[index]
+                                                      ['status'] ==
+                                                  "Pending")
+                                                ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  child:
+                                                      //if(imageData[index]['image_path']=="normal")
+                                                      Stack(
+                                                    children: [
+                                                      Image.asset(
+                                                        imageData[index]
+                                                            ['image_path'],
+                                                        fit: BoxFit.cover,
+                                                        height: 81 * fem,
+                                                        width: 91 * fem,
+                                                        color: Colors.black45,
+                                                        colorBlendMode:
+                                                            BlendMode.darken,
+                                                      ),
+                                                      Container(
+                                                        padding: EdgeInsets.all(
+                                                            20 * fem),
+                                                        child: Column(
+                                                          children: [
+                                                            SizedBox(
+                                                              height: 5 * fem,
+                                                            ),
+                                                            Text(
+                                                              imageData[index]
+                                                                  ["status"],
+                                                              style: TextStyle(
+                                                                  color: Color(
+                                                                      0xFFffffff),
+                                                                  fontSize:
+                                                                      13 * ffem,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w700,
+                                                                  fontFamily:
+                                                                      'Kanit'),
+                                                              overflow:
+                                                                  TextOverflow
+                                                                      .ellipsis,
+                                                            ),
+                                                            SizedBox(
+                                                              height: 5 * fem,
+                                                            ),
+                                                            Text(
+                                                              "for Sale",
+                                                              style: TextStyle(
+                                                                  color: Color(
+                                                                      0xFFffffff),
+                                                                  fontSize:
+                                                                      13 * ffem,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w700,
+                                                                  fontFamily:
+                                                                      'Kanit'),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      )
+                                                    ],
+                                                  ),
+                                                  //else
+                                                )
+                                              else
+                                                ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(10),
+                                                  child:
+                                                      //if(imageData[index]['image_path']=="normal")
+                                                      Image.asset(
+                                                    imageData[index]
+                                                        ['image_path'],
+                                                    fit: BoxFit.cover,
+                                                    height: 81 * fem,
+                                                    width: 91 * fem,
+                                                  ),
+                                                  //else
+                                                ),
+                                              SizedBox(
+                                                width: 15 * fem,
+                                              ),
+                                              Column(
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Container(
+                                                    width: 145 * fem,
+                                                    child: Text(
+                                                      imageData[index]["title"],
+                                                      style: TextStyle(
+                                                          color:
+                                                              Color(0xFF212B32),
+                                                          fontSize: 13 * ffem,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontFamily: 'Kanit'),
+                                                      overflow:
+                                                          TextOverflow.ellipsis,
+                                                    ),
+                                                  ),
+                                                  SizedBox(
+                                                    height: 5 * fem,
+                                                  ),
+                                                  Text(
+                                                    imageData[index]["price"],
+                                                    style: TextStyle(
+                                                        color:
+                                                            Color(0xFFfa784e),
+                                                        fontSize: 13 * ffem,
+                                                        fontWeight:
+                                                            FontWeight.w700,
+                                                        fontFamily: 'Kanit'),
+                                                  ),
+                                                  // xxxxx
+
+                                                  SizedBox(
+                                                    height: 50 * fem,
+                                                  ),
+                                                ],
+                                              ),
+                                              Expanded(child: SizedBox()),
+                                              Column(
+                                                children: [
+                                                  Image.asset(
+                                                    'assets/marketplace/images/Group 34208.png',
+                                                    fit: BoxFit.contain,
+                                                    height: 28 * fem,
+                                                    width: 28 * fem,
+                                                  ),
+                                                  //xxxxx
+                                                  SizedBox(
+                                                    height: 50 * fem,
+                                                  ),
+                                                ],
+                                              ),
+                                            ],
                                           ),
                                           SizedBox(
-                                            height: 50,
+                                            height: 10 * fem,
+                                          ),
+                                          Image.asset(
+                                            "assets/marketplace/images/Vector-1137.png",
                                           ),
                                         ],
                                       ),
-                                      Expanded(child: SizedBox()),
-                                      Image.asset(
-                                        'assets/marketplace/images/Group 34208.png',
-                                        fit: BoxFit.contain,
-                                        height: 28,
-                                        width: 28,
-                                      ),
+                                      if (imageData[index]['status'] ==
+                                          "Normal")
+                                        Column(
+                                          children: [
+                                            SizedBox(
+                                              height: 50,
+                                            ),
+                                            Row(
+                                              children: [
+                                                SizedBox(
+                                                  width: 107 * fem,
+                                                ),
+                                                Container(
+                                                  width: 108 * fem,
+                                                  height: 32 * fem,
+                                                  decoration: BoxDecoration(
+                                                    color: Color(0xfff1f1f1),
+                                                    borderRadius:
+                                                        BorderRadius.all(
+                                                      Radius.circular(5),
+                                                    ),
+                                                  ),
+                                                  child: Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      Text(
+                                                        "Edit",
+                                                        style: TextStyle(
+                                                            color: Color(
+                                                                0xFF767676),
+                                                            fontSize: 11 * ffem,
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                            fontFamily:
+                                                                'Kanit'),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                                SizedBox(
+                                                  width: 10 * fem,
+                                                ),
+                                                Container(
+                                                  width: 108 * fem,
+                                                  height: 32 * fem,
+                                                  decoration: BoxDecoration(
+                                                    color: Color(0xffC9EFFF),
+                                                    borderRadius:
+                                                        BorderRadius.all(
+                                                      Radius.circular(5),
+                                                    ),
+                                                  ),
+                                                  child: Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      Text(
+                                                        "Sold",
+                                                        style: TextStyle(
+                                                            color: Color(
+                                                                0xFF0884BA),
+                                                            fontSize: 13 * ffem,
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                            fontFamily:
+                                                                'Kanit'),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        )
+                                      else if (imageData[index]['status'] ==
+                                              "Reported" ||
+                                          imageData[index]['status'] ==
+                                              "Pending")
+                                        Column(
+                                          children: [
+                                            SizedBox(
+                                              height: 50,
+                                            ),
+                                            Row(
+                                              children: [
+                                                SizedBox(
+                                                  width: 107 * fem,
+                                                ),
+                                                Container(
+                                                  width: 108 * fem,
+                                                  height: 32 * fem,
+                                                  decoration: BoxDecoration(
+                                                    color: Color(0xfff1f1f1),
+                                                    borderRadius:
+                                                        BorderRadius.all(
+                                                      Radius.circular(5),
+                                                    ),
+                                                  ),
+                                                  child: Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      Text(
+                                                        "Edit",
+                                                        style: TextStyle(
+                                                            color: Color(
+                                                                0xFF767676),
+                                                            fontSize: 11 * ffem,
+                                                            fontWeight:
+                                                                FontWeight.w400,
+                                                            fontFamily:
+                                                                'Kanit'),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        )
                                     ],
                                   ),
                                 ),
