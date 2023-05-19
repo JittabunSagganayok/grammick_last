@@ -483,11 +483,16 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                                               Expanded(child: SizedBox()),
                                               Column(
                                                 children: [
-                                                  Image.asset(
-                                                    'assets/marketplace/images/Group 34208.png',
-                                                    fit: BoxFit.contain,
-                                                    height: 28 * fem,
-                                                    width: 28 * fem,
+                                                  GestureDetector(
+                                                    onTap: () {
+                                                      showDialogFunc(context);
+                                                    },
+                                                    child: Image.asset(
+                                                      'assets/marketplace/images/Group 34208.png',
+                                                      fit: BoxFit.contain,
+                                                      height: 28 * fem,
+                                                      width: 28 * fem,
+                                                    ),
                                                   ),
                                                   //xxxxx
                                                   SizedBox(
@@ -773,4 +778,92 @@ class RedeemConfirmationScreen extends StatelessWidget {
       ), // this is the main reason of transparency at next screen. I am ignoring rest implementation but what i have achieved is you can see.
     );
   }
+}
+
+showDialogFunc(context) {
+  double baseWidth = 375;
+  double fem = MediaQuery.of(context).size.width / baseWidth;
+  double ffem = fem * 0.97;
+  return showDialog(
+    context: context,
+    builder: (context) {
+      return Column(
+        children: [
+          Expanded(child: SizedBox()),
+          GestureDetector(
+            onTap: () {},
+            child: Center(
+              child: Material(
+                type: MaterialType.transparency,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: const Color(0xff232323),
+                  ),
+                  padding: EdgeInsets.all(0),
+                  height: 47 * fem,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Delete",
+                        style: SafeGoogleFont(
+                          'Kanit',
+                          fontSize: 14 * fem,
+                          fontWeight: FontWeight.w500,
+                          color: const Color(0xffffffff),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10 * ffem,
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pop(context, true);
+            },
+            child: Center(
+              child: Material(
+                type: MaterialType.transparency,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: const Color(0xff232323),
+                  ),
+                  padding: EdgeInsets.all(0),
+                  height: 47 * fem,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text(
+                        "Cancel",
+                        style: SafeGoogleFont(
+                          'Kanit',
+                          fontSize: 14 * fem,
+                          fontWeight: FontWeight.w300,
+                          color: const Color(0xffffffff),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          )
+        ],
+      );
+    },
+  );
 }
