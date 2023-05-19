@@ -4,6 +4,7 @@ import 'package:we_link/components/home/searchComponents/searchMenu.dart';
 import 'package:we_link/constant/colosrConstants.dart';
 import 'package:we_link/constant/stylesConstants.dart';
 import 'package:we_link/marketplace/fonts/utils.dart';
+import 'package:we_link/marketplace/pages/createproduct.dart';
 import 'package:we_link/marketplace/pages/favorite.dart';
 import 'package:we_link/marketplace/pages/marketplace.dart';
 import 'package:we_link/marketplace/widgets/fivemenu.dart';
@@ -165,36 +166,45 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                     SizedBox(
                       height: 15 * fem,
                     ),
-                    Container(
-                      width: double.infinity,
-                      height: 42 * fem,
-                      decoration: BoxDecoration(
-                        color: Color(0xffCEFFCD),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(10),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CreateProductScreen()),
+                        );
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        height: 42 * fem,
+                        decoration: BoxDecoration(
+                          color: Color(0xffCEFFCD),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
                         ),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            'assets/marketplace/images/Group 34217.png',
-                            width: 16 * fem,
-                            height: 18 * fem,
-                          ),
-                          SizedBox(
-                            width: 5 * fem,
-                          ),
-                          Text(
-                            "Create Product",
-                            style: TextStyle(
-                                color: Color(0xFF189b58),
-                                fontSize: 13 * ffem,
-                                fontWeight: FontWeight.w500,
-                                fontFamily: 'Kanit'),
-                          ),
-                        ],
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/marketplace/images/Group 34217.png',
+                              width: 16 * fem,
+                              height: 18 * fem,
+                            ),
+                            SizedBox(
+                              width: 5 * fem,
+                            ),
+                            Text(
+                              "Create Product",
+                              style: TextStyle(
+                                  color: Color(0xFF189b58),
+                                  fontSize: 13 * ffem,
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: 'Kanit'),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
