@@ -13,14 +13,14 @@ import 'package:we_link/marketplace/widgets/header.dart';
 import 'package:we_link/marketplace/data/data.dart';
 import 'package:we_link/marketplace/widgets/imagecard.dart';
 
-class CreateProductScreen extends StatefulWidget {
-  CreateProductScreen({super.key});
+class EditProductScreen extends StatefulWidget {
+  EditProductScreen({super.key});
 
   @override
-  State<CreateProductScreen> createState() => _CreateProductScreenState();
+  State<EditProductScreen> createState() => _EditProductScreenState();
 }
 
-class _CreateProductScreenState extends State<CreateProductScreen> {
+class _EditProductScreenState extends State<EditProductScreen> {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 375;
@@ -349,7 +349,7 @@ class _CreateProductScreenState extends State<CreateProductScreen> {
                             Row(
                               children: [
                                 Text(
-                                  "Create product",
+                                  "Edit product",
                                   style: SafeGoogleFont(
                                     'Kanit',
                                     fontSize: 22 * ffem,
