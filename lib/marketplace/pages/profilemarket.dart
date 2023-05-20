@@ -13,6 +13,8 @@ import 'package:we_link/marketplace/widgets/header.dart';
 import 'package:we_link/marketplace/data/data.dart';
 import 'package:we_link/marketplace/widgets/imagecard.dart';
 
+import 'editproduct.dart';
+
 class ProfilemarketScreen extends StatefulWidget {
   ProfilemarketScreen({super.key});
 
@@ -63,7 +65,12 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                             // group71484ii (1:222)
                             GestureDetector(
                               onTap: () {
-                                Navigator.of(context).pop();
+                                //Navigator.of(context).pop();
+                                Navigator.of(context).pushAndRemoveUntil(
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            MarketHomeScreen()),
+                                    (Route<dynamic> route) => false);
                               },
                               child: Image.asset(
                                 'assets/marketplace/images/group-7148.png',
@@ -532,36 +539,48 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                                                 SizedBox(
                                                   width: 107 * fem,
                                                 ),
-                                                Container(
-                                                  width: 108 * fem,
-                                                  height: 32 * fem,
-                                                  decoration: BoxDecoration(
-                                                    color: Color(0xfff1f1f1),
-                                                    borderRadius:
-                                                        BorderRadius.all(
-                                                      Radius.circular(5),
-                                                    ),
-                                                  ),
-                                                  child: Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Text(
-                                                        "Edit",
-                                                        style: TextStyle(
-                                                            color: Color(
-                                                                0xFF767676),
-                                                            fontSize: 11 * ffem,
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                            fontFamily:
-                                                                'Kanit'),
+                                                GestureDetector(
+                                                  onTap: () {
+                                                    Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              EditProductScreen()),
+                                                    );
+                                                  },
+                                                  child: Container(
+                                                    width: 108 * fem,
+                                                    height: 32 * fem,
+                                                    decoration: BoxDecoration(
+                                                      color: Color(0xfff1f1f1),
+                                                      borderRadius:
+                                                          BorderRadius.all(
+                                                        Radius.circular(5),
                                                       ),
-                                                    ],
+                                                    ),
+                                                    child: Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        Text(
+                                                          "Edit",
+                                                          style: TextStyle(
+                                                              color: Color(
+                                                                  0xFF767676),
+                                                              fontSize:
+                                                                  11 * ffem,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w400,
+                                                              fontFamily:
+                                                                  'Kanit'),
+                                                        ),
+                                                      ],
+                                                    ),
                                                   ),
                                                 ),
                                                 SizedBox(
@@ -617,36 +636,48 @@ class _ProfilemarketScreenState extends State<ProfilemarketScreen> {
                                                 SizedBox(
                                                   width: 107 * fem,
                                                 ),
-                                                Container(
-                                                  width: 108 * fem,
-                                                  height: 32 * fem,
-                                                  decoration: BoxDecoration(
-                                                    color: Color(0xfff1f1f1),
-                                                    borderRadius:
-                                                        BorderRadius.all(
-                                                      Radius.circular(5),
-                                                    ),
-                                                  ),
-                                                  child: Row(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .center,
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .center,
-                                                    children: [
-                                                      Text(
-                                                        "Edit",
-                                                        style: TextStyle(
-                                                            color: Color(
-                                                                0xFF767676),
-                                                            fontSize: 11 * ffem,
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                            fontFamily:
-                                                                'Kanit'),
+                                                GestureDetector(
+                                                  onTap: () {
+                                                    Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              EditProductScreen()),
+                                                    );
+                                                  },
+                                                  child: Container(
+                                                    width: 108 * fem,
+                                                    height: 32 * fem,
+                                                    decoration: BoxDecoration(
+                                                      color: Color(0xfff1f1f1),
+                                                      borderRadius:
+                                                          BorderRadius.all(
+                                                        Radius.circular(5),
                                                       ),
-                                                    ],
+                                                    ),
+                                                    child: Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        Text(
+                                                          "Edit",
+                                                          style: TextStyle(
+                                                              color: Color(
+                                                                  0xFF767676),
+                                                              fontSize:
+                                                                  11 * ffem,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w400,
+                                                              fontFamily:
+                                                                  'Kanit'),
+                                                        ),
+                                                      ],
+                                                    ),
                                                   ),
                                                 ),
                                               ],

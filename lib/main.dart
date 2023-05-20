@@ -53,8 +53,8 @@ class MyApp extends StatelessWidget {
         home: MaterialApp(
           title: 'we link',
           debugShowCheckedModeBanner: false,
-          //home: SplashScreen(),
-          home: MarketHomeScreen(),
+          home: SplashScreen(),
+          //home: MarketHomeScreen(),
         ),
       ),
     );

@@ -11,22 +11,20 @@ import 'package:we_link/marketplace/widgets/header.dart';
 import 'package:we_link/marketplace/data/data.dart';
 import 'package:we_link/marketplace/widgets/imagecard.dart';
 
-class MapSearchMScreen extends StatefulWidget {
-  MapSearchMScreen({super.key});
+class MapProductScreen extends StatefulWidget {
+  MapProductScreen({super.key});
 
   @override
-  State<MapSearchMScreen> createState() => _MapSearchMScreenState();
+  State<MapProductScreen> createState() => _MapProductScreenState();
 }
 
-class _MapSearchMScreenState extends State<MapSearchMScreen> {
+class _MapProductScreenState extends State<MapProductScreen> {
   @override
   Widget build(BuildContext context) {
     double baseWidth = 375;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     double fontfem = fem * 0.85;
-    double h1 = ((250 * (imagescardList.length) / 2) + 4) * fem;
-    double _currentSliderValue = 50;
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -36,15 +34,16 @@ class _MapSearchMScreenState extends State<MapSearchMScreen> {
             Stack(
               children: [
                 Container(
-                  padding: EdgeInsets.fromLTRB(0, 90, 0, 0),
+                  padding: EdgeInsets.fromLTRB(0, 128, 0, 0),
                   color: Colors.white,
                   child: Container(
                     child: Column(
                       children: [
                         Image.asset(
-                          'assets/marketplace/images/Group 1000001280.png',
+                          'assets/marketplace/images/Group 1000001281.png',
                           width: 375 * fem,
-                          height: 513 * fem,
+                          height: 547 * fem,
+                          fit: BoxFit.fill,
                         ),
                       ],
                     ),
@@ -105,7 +104,8 @@ class _MapSearchMScreenState extends State<MapSearchMScreen> {
                                         // },
                                         keyboardType: TextInputType.text,
                                         decoration: InputDecoration(
-                                            hintText: "Bangkok",
+                                            hintText:
+                                                "Bangkapi , 10240 , Bangkok",
                                             //widget.search
                                             fillColor: Colors.white,
                                             filled: true,
@@ -152,12 +152,12 @@ class _MapSearchMScreenState extends State<MapSearchMScreen> {
                 Column(
                   children: [
                     SizedBox(
-                      height: 575 * fem,
+                      height: 685 * fem,
                     ),
                     Container(
                       color: Colors.white,
                       width: 375 * fem,
-                      height: 220 * fem,
+                      height: 110 * fem,
                       child: Padding(
                         padding: const EdgeInsets.all(20.0),
                         child: Column(
@@ -165,71 +165,67 @@ class _MapSearchMScreenState extends State<MapSearchMScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
-                              height: 5,
+                              height: 10,
                             ),
-                            Text(
-                              'Radius in custom area',
-                              style: SafeGoogleFont(
-                                'Kanit',
-                                fontSize: 14 * ffem,
-                                fontWeight: FontWeight.w500,
-                                height: 1.495 * ffem / fem,
-                                letterSpacing: -0.22 * fem,
-                                color: const Color(0xff212B32),
-                              ),
-                            ),
-                            Text(
-                              'Show me only items within a certain distance.',
-                              style: SafeGoogleFont(
-                                'Kanit',
-                                fontSize: 14 * ffem,
-                                fontWeight: FontWeight.w400,
-                                height: 1.495 * ffem / fem,
-                                letterSpacing: -0.22 * fem,
-                                color: const Color(0xff606060),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 15,
-                            ),
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: Slider(
-                                    value: _currentSliderValue,
-                                    max: 100,
-                                    divisions: 100,
-                                    label:
-                                        _currentSliderValue.round().toString(),
-                                    onChanged: (double value) {
-                                      setState(() {
-                                        _currentSliderValue = value;
-                                      });
-                                    },
-                                  ),
-                                ),
-                                //Expanded(child: SizedBox()),
-                                Text(
-                                  "6 km.",
-                                  style: SafeGoogleFont(
-                                    'Kanit',
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w400,
-                                    color: const Color(0xff606060),
-                                  ),
-                                )
-                              ],
-                            ),
-                            SizedBox(
-                              height: 15,
-                            ),
+                            // Text(
+                            //   'Radius in custom area',
+                            //   style: SafeGoogleFont(
+                            //     'Kanit',
+                            //     fontSize: 14 * ffem,
+                            //     fontWeight: FontWeight.w500,
+                            //     height: 1.495 * ffem / fem,
+                            //     letterSpacing: -0.22 * fem,
+                            //     color: const Color(0xff212B32),
+                            //   ),
+                            // ),
+                            // Text(
+                            //   'Show me only items within a certain distance.',
+                            //   style: SafeGoogleFont(
+                            //     'Kanit',
+                            //     fontSize: 14 * ffem,
+                            //     fontWeight: FontWeight.w400,
+                            //     height: 1.495 * ffem / fem,
+                            //     letterSpacing: -0.22 * fem,
+                            //     color: const Color(0xff606060),
+                            //   ),
+                            // ),
+                            // SizedBox(
+                            //   height: 15,
+                            // ),
+                            // Row(
+                            //   children: [
+                            //     Expanded(
+                            //       child: Slider(
+                            //         value: _currentSliderValue,
+                            //         max: 100,
+                            //         divisions: 100,
+                            //         label:
+                            //             _currentSliderValue.round().toString(),
+                            //         onChanged: (double value) {
+                            //           setState(() {
+                            //             _currentSliderValue = value;
+                            //           });
+                            //         },
+                            //       ),
+                            //     ),
+                            //     //Expanded(child: SizedBox()),
+                            //     Text(
+                            //       "6 km.",
+                            //       style: SafeGoogleFont(
+                            //         'Kanit',
+                            //         fontSize: 11,
+                            //         fontWeight: FontWeight.w400,
+                            //         color: const Color(0xff606060),
+                            //       ),
+                            //     )
+                            //   ],
+                            // ),
+                            // SizedBox(
+                            //   height: 15,
+                            // ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.of(context).pushAndRemoveUntil(
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            MarketHomeScreen()),
-                                    (Route<dynamic> route) => false);
+                                Navigator.pop(context);
                               },
                               child: Center(
                                 child: Material(

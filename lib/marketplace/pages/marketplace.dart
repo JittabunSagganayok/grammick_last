@@ -9,6 +9,8 @@ import 'package:we_link/marketplace/widgets/recommend.dart';
 import 'package:we_link/marketplace/widgets/slidepic.dart';
 import 'package:we_link/marketplace/widgets/tabforyou.dart';
 
+import 'createproduct.dart';
+
 class MarketHomeScreen extends StatefulWidget {
   const MarketHomeScreen({super.key});
 
@@ -123,6 +125,10 @@ class _MarketHomeScreenState extends State<MarketHomeScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // Add your onPressed code here!
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => CreateProductScreen()),
+          );
         },
         backgroundColor: const Color(0xff189B58),
         child: Image.asset(

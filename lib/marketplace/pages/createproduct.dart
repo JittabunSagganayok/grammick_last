@@ -7,11 +7,14 @@ import 'package:we_link/constant/stylesConstants.dart';
 import 'package:we_link/marketplace/fonts/utils.dart';
 import 'package:we_link/marketplace/pages/favorite.dart';
 import 'package:we_link/marketplace/pages/marketplace.dart';
+import 'package:we_link/marketplace/pages/profilemarket.dart';
 import 'package:we_link/marketplace/widgets/fivemenu.dart';
 import 'package:we_link/marketplace/widgets/header.dart';
 
 import 'package:we_link/marketplace/data/data.dart';
 import 'package:we_link/marketplace/widgets/imagecard.dart';
+
+import 'mapproduct.dart';
 
 class CreateProductScreen extends StatefulWidget {
   CreateProductScreen({super.key});
@@ -246,11 +249,21 @@ class _CreateProductScreenState extends State<CreateProductScreen> {
                               SizedBox(
                                 height: 17 * fem,
                               ),
-                              Image.asset(
-                                'assets/marketplace/images/Rectangle 4626.png',
-                                fit: BoxFit.contain,
-                                height: 112 * fem,
-                                width: 337 * fem,
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            MapProductScreen()),
+                                  );
+                                },
+                                child: Image.asset(
+                                  'assets/marketplace/images/Rectangle 4626.png',
+                                  fit: BoxFit.contain,
+                                  height: 112 * fem,
+                                  width: 337 * fem,
+                                ),
                               ),
                               SizedBox(
                                 height: 25,
@@ -335,7 +348,12 @@ class _CreateProductScreenState extends State<CreateProductScreen> {
                             // group71484ii (1:222)
                             GestureDetector(
                               onTap: () {
-                                Navigator.of(context).pop();
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          ProfilemarketScreen()),
+                                );
                               },
                               child: Image.asset(
                                 'assets/marketplace/images/group-7148.png',
@@ -344,7 +362,7 @@ class _CreateProductScreenState extends State<CreateProductScreen> {
                               ),
                             ),
                             SizedBox(
-                              width: 60 * fem,
+                              width: 70 * fem,
                             ),
                             Row(
                               children: [
@@ -403,32 +421,38 @@ class _CreateProductScreenState extends State<CreateProductScreen> {
                             SizedBox(
                               height: 10,
                             ),
-                            Center(
-                              child: Material(
-                                type: MaterialType.transparency,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(25),
-                                    color: const Color(0xffFDCD03),
-                                  ),
-                                  padding: EdgeInsets.all(0),
-                                  height: 45 * fem,
-                                  width: MediaQuery.of(context).size.width,
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Text(
-                                        "Confirm",
-                                        style: SafeGoogleFont(
-                                          'Kanit',
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w500,
-                                          color: const Color(0xff000000),
+                            GestureDetector(
+                              onTap: () {
+                                showDialogFunc(context);
+                              },
+                              child: Center(
+                                child: Material(
+                                  type: MaterialType.transparency,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(25),
+                                      color: const Color(0xffFDCD03),
+                                    ),
+                                    padding: EdgeInsets.all(0),
+                                    height: 45 * fem,
+                                    width: MediaQuery.of(context).size.width,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Text(
+                                          "Confirm",
+                                          style: SafeGoogleFont(
+                                            'Kanit',
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            color: const Color(0xff000000),
+                                          ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -446,4 +470,123 @@ class _CreateProductScreenState extends State<CreateProductScreen> {
       ),
     );
   }
+}
+
+showDialogFunc(context) {
+  return showDialog(
+    context: context,
+    builder: (context) {
+      return Center(
+        child: GestureDetector(
+          onTap: () {
+            // Navigator.pop(context, true);
+            //Modular.to.pushReplacementNamed('/report');
+            // Navigator.push(
+            //   context,
+            //   MaterialPageRoute(
+            //       builder: (context) => ReportScreen(
+            //             imageDatax: imageDatax,
+            //           )),
+            // );
+          },
+          child: Center(
+            child: Material(
+              type: MaterialType.transparency,
+              child: Container(
+                height: 277,
+                width: 269,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.white,
+                ),
+                padding: EdgeInsets.all(0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Image.asset(
+                      'assets/marketplace/images/image 7.png',
+                      width: 64,
+                      height: 64,
+                    ),
+                    SizedBox(
+                      height: 17,
+                    ),
+                    Text(
+                      "Success Report",
+                      style: SafeGoogleFont(
+                        'Kanit',
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                        color: const Color(0xff2f2f2f),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      "Product created successfully",
+                      style: SafeGoogleFont(
+                        'Kanit',
+                        fontSize: 15,
+                        fontWeight: FontWeight.w200,
+                        color: const Color(0xff2f2f2f),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 35,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        // Modular.to.pushNamed(
+                        //   '/detail',
+                        //   arguments: imageDatax,
+                        // );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CreateProductScreen()),
+                        );
+                        // Navigator.pop(context, true);
+                        // Navigator.pop(context, true);
+                      },
+                      child: Center(
+                        child: Material(
+                          type: MaterialType.transparency,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(25),
+                              color: const Color(0xffFDCD03),
+                            ),
+                            padding: EdgeInsets.all(0),
+                            height: 48,
+                            width: 197,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Text(
+                                  "Done",
+                                  style: SafeGoogleFont(
+                                    'Kanit',
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w500,
+                                    color: const Color(0xff000000),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
+    },
+  );
 }

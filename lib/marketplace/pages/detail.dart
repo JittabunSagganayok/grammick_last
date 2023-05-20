@@ -232,7 +232,14 @@ class _DetailScreenState extends State<DetailScreen> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        showDialogFuncCallout(context);
+                        //showDialogFuncCallout(context);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => InformationScreen(
+                                    imageDataxinfo: imageDataxinfo,
+                                  )),
+                        );
                       },
                       child: SizedBox(
                         width: 332 * fem,
@@ -292,15 +299,20 @@ class _DetailScreenState extends State<DetailScreen> {
                               Expanded(
                                 child: SizedBox(),
                               ),
-                              SizedBox(
-                                // iconVNe (1:251)
+                              GestureDetector(
+                                onTap: () {
+                                  showDialogFuncCallout(context);
+                                },
+                                child: SizedBox(
+                                  // iconVNe (1:251)
 
-                                width: 35 * fem,
-                                height: 35 * fem,
-                                child: Image.asset(
-                                  'assets/marketplace/images/Group-34225.png',
                                   width: 35 * fem,
                                   height: 35 * fem,
+                                  child: Image.asset(
+                                    'assets/marketplace/images/Group-34225.png',
+                                    width: 35 * fem,
+                                    height: 35 * fem,
+                                  ),
                                 ),
                               ),
                             ],
@@ -369,13 +381,13 @@ class _DetailScreenState extends State<DetailScreen> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => InformationScreen(
-                                              imageDataxinfo: imageDataxinfo,
-                                            )),
-                                  );
+                                  // Navigator.push(
+                                  //   context,
+                                  //   MaterialPageRoute(
+                                  //       builder: (context) => InformationScreen(
+                                  //             imageDataxinfo: imageDataxinfo,
+                                  //           )),
+                                  // );
                                 },
                                 child: Image.asset(
                                   'assets/marketplace/images/group-34013.png',

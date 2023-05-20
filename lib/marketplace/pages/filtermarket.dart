@@ -259,32 +259,38 @@ class _FiltermarketScreenState extends State<FiltermarketScreen> {
                             SizedBox(
                               height: 10,
                             ),
-                            Center(
-                              child: Material(
-                                type: MaterialType.transparency,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(25),
-                                    color: const Color(0xffFDCD03),
-                                  ),
-                                  padding: EdgeInsets.all(0),
-                                  height: 45 * fem,
-                                  width: MediaQuery.of(context).size.width,
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Text(
-                                        "Confirm",
-                                        style: SafeGoogleFont(
-                                          'Kanit',
-                                          fontSize: 15,
-                                          fontWeight: FontWeight.w500,
-                                          color: const Color(0xff000000),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.pop(context);
+                              },
+                              child: Center(
+                                child: Material(
+                                  type: MaterialType.transparency,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(25),
+                                      color: const Color(0xffFDCD03),
+                                    ),
+                                    padding: EdgeInsets.all(0),
+                                    height: 45 * fem,
+                                    width: MediaQuery.of(context).size.width,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Text(
+                                          "Confirm",
+                                          style: SafeGoogleFont(
+                                            'Kanit',
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            color: const Color(0xff000000),
+                                          ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
